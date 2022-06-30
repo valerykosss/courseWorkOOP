@@ -1,0 +1,59 @@
+﻿<Page x:Class="CLINICS.adminpages.RegistrationTable"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CLINICS.adminpages"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1550"
+      FontFamily="Montserrat"
+      Title="RegistrationTable">
+
+    <Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10*"></ColumnDefinition>
+                <ColumnDefinition Width="40*"></ColumnDefinition>
+                <ColumnDefinition Width="60*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="1">
+                <StackPanel>
+                    <!--и вот че с этими полями делать???-->
+                    <TextBlock Margin="20,50,20,0" Foreground="White">Выберите ID даты и времени проведения операции</TextBlock>
+                    <ComboBox x:Name="DateIDCombobox" SelectionChanged="DateIDCombobox_SelectionChanged" SelectedValuePath="DateID" FontSize="20" Text="{Binding DateID}" DisplayMemberPath="DateID" Margin="20,10,20,20"  Height="30"/>
+
+                    <TextBlock Margin="20,5,20,0" Foreground="White">Выберите телефон владельца аккаунта</TextBlock>
+                    <ComboBox x:Name="ClientIDCombobox" FontSize="20" SelectedValuePath="ClientID" Text="{Binding ClientID}" DisplayMemberPath="ClientID" Margin="20,10,20,20" Height="30"/>
+
+                    <!--и вот че с этими полями делать???-->
+                    <TextBlock Margin="20,5,20,0" Foreground="White">Выберите ID операции и фамилии врача, который ее проводит</TextBlock>
+                    <ComboBox x:Name="DoctorServiceIDCombobox" SelectedValuePath="DoctorServiceID" FontSize="20" Text="{Binding DoctorServiceID}" DisplayMemberPath="DoctorServiceID" Margin="20,10,20,20"  Height="30"/>
+
+                    <!--и вот че с этими полями делать???-->
+                    <TextBlock Margin="20,5,20,0" Foreground="White">Выберите статус операции</TextBlock>
+                    <ComboBox x:Name="StatusCombobox" FontSize="20" Text="{Binding Status}" Margin="20,10,20,20"  Height="30">
+                        <ComboBoxItem Content="запланирована"></ComboBoxItem>
+                        <ComboBoxItem Content="проведена"></ComboBoxItem>
+                        <ComboBoxItem Content="отменена"></ComboBoxItem>
+                        <ComboBoxItem Content="оценена"></ComboBoxItem>
+                    </ComboBox>
+                </StackPanel>
+                <StackPanel Margin="100 20">
+                    <Button x:Name="add" Content="Добавить" Height="30"  Margin="0,10,0,0" Click="add_Click"/>
+                    <Button  x:Name="edit" Content="Изменить" Margin="0,10,0,0" Height="30" Click="edit_Click" />
+                    <Button x:Name="save" Content="Сохранить изменения" Click="save_Click" Height="30" Margin="0,10,0,0"/>
+                    <Button  x:Name="delete" Content="Удалить" Margin="0,10,0,0" Height="30" Click="delete_Click"/>
+                </StackPanel>
+            </StackPanel>
+            <DataGrid HorizontalAlignment="Center" x:Name="RegistrationDataGrid" Margin="60,80,60,400" Grid.Column="2" AutoGenerateColumns="False" Width="544" IsReadOnly="True">
+                <DataGrid.Columns>
+                    <DataGridTextColumn  Header="ID" Binding="{Binding RegistationID}" Width="50"></DataGridTextColumn>
+                    <DataGridTextColumn  Header="ID клиента" Binding="{Binding ClientID}" Width="50"></DataGridTextColumn>
+                    <DataGridTextColumn  Header="ID доктор-сервис" Binding="{Binding DoctorServiceID}" Width="150"></DataGridTextColumn>
+                    <DataGridTextColumn Header="ID дата-время" Binding="{Binding DateID}" Width="150"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Статус" Binding="{Binding Status}" Width="150"></DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+    </Grid>
+</Page>
