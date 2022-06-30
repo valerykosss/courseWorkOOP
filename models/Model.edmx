@@ -1,0 +1,595 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="CLINICSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CLIENT">
+          <Key>
+            <PropertyRef Name="ClientID" />
+          </Key>
+          <Property Name="ClientID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ClientName" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="ClientSurname" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="UserType" Type="int" Nullable="false" />
+          <Property Name="TelephoneNumber" Type="nvarchar" MaxLength="19" />
+          <Property Name="ClientPatronymic" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="DOCTOR">
+          <Key>
+            <PropertyRef Name="DoctorID" />
+          </Key>
+          <Property Name="DoctorID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DoctorName" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="DoctorSurname" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="DoctorPatronymic" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="DoctorImage" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="DOCTOR_RATING">
+          <Key>
+            <PropertyRef Name="CommentID" />
+          </Key>
+          <Property Name="CommentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DoctorID" Type="int" Nullable="false" />
+          <Property Name="ClientID" Type="int" Nullable="false" />
+          <Property Name="Rating" Type="float" Nullable="false" />
+          <Property Name="Comment" Type="nvarchar" MaxLength="1000" />
+        </EntityType>
+        <EntityType Name="DOCTOR_SERVICE">
+          <Key>
+            <PropertyRef Name="DoctorServiceID" />
+          </Key>
+          <Property Name="DoctorServiceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DoctorID" Type="int" Nullable="false" />
+          <Property Name="ServiceID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="REGISTRATION">
+          <Key>
+            <PropertyRef Name="RegistationID" />
+          </Key>
+          <Property Name="RegistationID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ClientID" Type="int" Nullable="false" />
+          <Property Name="DoctorServiceID" Type="int" Nullable="false" />
+          <Property Name="DateID" Type="int" Nullable="false" />
+          <Property Name="Status" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="REGISTRATION_DATE">
+          <Key>
+            <PropertyRef Name="DateID" />
+          </Key>
+          <Property Name="DateID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Date" Type="date" Nullable="false" />
+          <Property Name="TimeID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="REGISTRATION_TIME">
+          <Key>
+            <PropertyRef Name="TimeID" />
+          </Key>
+          <Property Name="TimeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Time" Type="time" Precision="7" />
+        </EntityType>
+        <EntityType Name="SERVICE">
+          <Key>
+            <PropertyRef Name="ServiceID" />
+          </Key>
+          <Property Name="ServiceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ServiceName" Type="nvarchar" MaxLength="70" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <Association Name="FK_DOCTOR_RATING_CLIENT">
+          <End Role="CLIENT" Type="Self.CLIENT" Multiplicity="1" />
+          <End Role="DOCTOR_RATING" Type="Self.DOCTOR_RATING" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CLIENT">
+              <PropertyRef Name="ClientID" />
+            </Principal>
+            <Dependent Role="DOCTOR_RATING">
+              <PropertyRef Name="ClientID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DOCTOR_RATING_DOCTOR">
+          <End Role="DOCTOR" Type="Self.DOCTOR" Multiplicity="1" />
+          <End Role="DOCTOR_RATING" Type="Self.DOCTOR_RATING" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DOCTOR">
+              <PropertyRef Name="DoctorID" />
+            </Principal>
+            <Dependent Role="DOCTOR_RATING">
+              <PropertyRef Name="DoctorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DOCTOR_SERVICE_DOCTOR">
+          <End Role="DOCTOR" Type="Self.DOCTOR" Multiplicity="1" />
+          <End Role="DOCTOR_SERVICE" Type="Self.DOCTOR_SERVICE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DOCTOR">
+              <PropertyRef Name="DoctorID" />
+            </Principal>
+            <Dependent Role="DOCTOR_SERVICE">
+              <PropertyRef Name="DoctorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DOCTOR_SERVICE_SERVICE">
+          <End Role="SERVICE" Type="Self.SERVICE" Multiplicity="1" />
+          <End Role="DOCTOR_SERVICE" Type="Self.DOCTOR_SERVICE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SERVICE">
+              <PropertyRef Name="ServiceID" />
+            </Principal>
+            <Dependent Role="DOCTOR_SERVICE">
+              <PropertyRef Name="ServiceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_REGISTRATION_CLIENT">
+          <End Role="CLIENT" Type="Self.CLIENT" Multiplicity="1" />
+          <End Role="REGISTRATION" Type="Self.REGISTRATION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CLIENT">
+              <PropertyRef Name="ClientID" />
+            </Principal>
+            <Dependent Role="REGISTRATION">
+              <PropertyRef Name="ClientID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_REGISTRATION_DATE_REGISTRATION_TIME">
+          <End Role="REGISTRATION_TIME" Type="Self.REGISTRATION_TIME" Multiplicity="1" />
+          <End Role="REGISTRATION_DATE" Type="Self.REGISTRATION_DATE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="REGISTRATION_TIME">
+              <PropertyRef Name="TimeID" />
+            </Principal>
+            <Dependent Role="REGISTRATION_DATE">
+              <PropertyRef Name="TimeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_REGISTRATION_DOCTOR_SERVICE">
+          <End Role="DOCTOR_SERVICE" Type="Self.DOCTOR_SERVICE" Multiplicity="1" />
+          <End Role="REGISTRATION" Type="Self.REGISTRATION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DOCTOR_SERVICE">
+              <PropertyRef Name="DoctorServiceID" />
+            </Principal>
+            <Dependent Role="REGISTRATION">
+              <PropertyRef Name="DoctorServiceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_REGISTRATION_REGISTRATION_DATE">
+          <End Role="REGISTRATION_DATE" Type="Self.REGISTRATION_DATE" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="REGISTRATION" Type="Self.REGISTRATION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="REGISTRATION_DATE">
+              <PropertyRef Name="DateID" />
+            </Principal>
+            <Dependent Role="REGISTRATION">
+              <PropertyRef Name="DateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="CLINICSModelStoreContainer">
+          <EntitySet Name="CLIENT" EntityType="Self.CLIENT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DOCTOR" EntityType="Self.DOCTOR" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DOCTOR_RATING" EntityType="Self.DOCTOR_RATING" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DOCTOR_SERVICE" EntityType="Self.DOCTOR_SERVICE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="REGISTRATION" EntityType="Self.REGISTRATION" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="REGISTRATION_DATE" EntityType="Self.REGISTRATION_DATE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="REGISTRATION_TIME" EntityType="Self.REGISTRATION_TIME" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SERVICE" EntityType="Self.SERVICE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_DOCTOR_RATING_CLIENT" Association="Self.FK_DOCTOR_RATING_CLIENT">
+            <End Role="CLIENT" EntitySet="CLIENT" />
+            <End Role="DOCTOR_RATING" EntitySet="DOCTOR_RATING" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DOCTOR_RATING_DOCTOR" Association="Self.FK_DOCTOR_RATING_DOCTOR">
+            <End Role="DOCTOR" EntitySet="DOCTOR" />
+            <End Role="DOCTOR_RATING" EntitySet="DOCTOR_RATING" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DOCTOR_SERVICE_DOCTOR" Association="Self.FK_DOCTOR_SERVICE_DOCTOR">
+            <End Role="DOCTOR" EntitySet="DOCTOR" />
+            <End Role="DOCTOR_SERVICE" EntitySet="DOCTOR_SERVICE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DOCTOR_SERVICE_SERVICE" Association="Self.FK_DOCTOR_SERVICE_SERVICE">
+            <End Role="SERVICE" EntitySet="SERVICE" />
+            <End Role="DOCTOR_SERVICE" EntitySet="DOCTOR_SERVICE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_REGISTRATION_CLIENT" Association="Self.FK_REGISTRATION_CLIENT">
+            <End Role="CLIENT" EntitySet="CLIENT" />
+            <End Role="REGISTRATION" EntitySet="REGISTRATION" />
+          </AssociationSet>
+          <AssociationSet Name="FK_REGISTRATION_DATE_REGISTRATION_TIME" Association="Self.FK_REGISTRATION_DATE_REGISTRATION_TIME">
+            <End Role="REGISTRATION_TIME" EntitySet="REGISTRATION_TIME" />
+            <End Role="REGISTRATION_DATE" EntitySet="REGISTRATION_DATE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_REGISTRATION_DOCTOR_SERVICE" Association="Self.FK_REGISTRATION_DOCTOR_SERVICE">
+            <End Role="DOCTOR_SERVICE" EntitySet="DOCTOR_SERVICE" />
+            <End Role="REGISTRATION" EntitySet="REGISTRATION" />
+          </AssociationSet>
+          <AssociationSet Name="FK_REGISTRATION_REGISTRATION_DATE" Association="Self.FK_REGISTRATION_REGISTRATION_DATE">
+            <End Role="REGISTRATION_DATE" EntitySet="REGISTRATION_DATE" />
+            <End Role="REGISTRATION" EntitySet="REGISTRATION" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CLINICSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CLIENT">
+          <Key>
+            <PropertyRef Name="ClientID" />
+          </Key>
+          <Property Name="ClientID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ClientName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ClientSurname" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="UserType" Type="Int32" Nullable="false" />
+          <Property Name="TelephoneNumber" Type="String" MaxLength="19" FixedLength="false" Unicode="true" />
+          <Property Name="ClientPatronymic" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="DOCTOR_RATING" Relationship="Self.FK_DOCTOR_RATING_CLIENT" FromRole="CLIENT" ToRole="DOCTOR_RATING" />
+          <NavigationProperty Name="REGISTRATIONs" Relationship="Self.FK_REGISTRATION_CLIENT" FromRole="CLIENT" ToRole="REGISTRATION" />
+        </EntityType>
+        <EntityType Name="DOCTOR">
+          <Key>
+            <PropertyRef Name="DoctorID" />
+          </Key>
+          <Property Name="DoctorID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DoctorName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DoctorSurname" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DoctorPatronymic" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DoctorImage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="DOCTOR_RATING" Relationship="Self.FK_DOCTOR_RATING_DOCTOR" FromRole="DOCTOR" ToRole="DOCTOR_RATING" />
+          <NavigationProperty Name="DOCTOR_SERVICE" Relationship="Self.FK_DOCTOR_SERVICE_DOCTOR" FromRole="DOCTOR" ToRole="DOCTOR_SERVICE" />
+        </EntityType>
+        <EntityType Name="DOCTOR_RATING">
+          <Key>
+            <PropertyRef Name="CommentID" />
+          </Key>
+          <Property Name="CommentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DoctorID" Type="Int32" Nullable="false" />
+          <Property Name="ClientID" Type="Int32" Nullable="false" />
+          <Property Name="Rating" Type="Double" Nullable="false" />
+          <Property Name="Comment" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="CLIENT" Relationship="Self.FK_DOCTOR_RATING_CLIENT" FromRole="DOCTOR_RATING" ToRole="CLIENT" />
+          <NavigationProperty Name="DOCTOR" Relationship="Self.FK_DOCTOR_RATING_DOCTOR" FromRole="DOCTOR_RATING" ToRole="DOCTOR" />
+        </EntityType>
+        <EntityType Name="DOCTOR_SERVICE">
+          <Key>
+            <PropertyRef Name="DoctorServiceID" />
+          </Key>
+          <Property Name="DoctorServiceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DoctorID" Type="Int32" Nullable="false" />
+          <Property Name="ServiceID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="DOCTOR" Relationship="Self.FK_DOCTOR_SERVICE_DOCTOR" FromRole="DOCTOR_SERVICE" ToRole="DOCTOR" />
+          <NavigationProperty Name="SERVICE" Relationship="Self.FK_DOCTOR_SERVICE_SERVICE" FromRole="DOCTOR_SERVICE" ToRole="SERVICE" />
+          <NavigationProperty Name="REGISTRATIONs" Relationship="Self.FK_REGISTRATION_DOCTOR_SERVICE" FromRole="DOCTOR_SERVICE" ToRole="REGISTRATION" />
+        </EntityType>
+        <EntityType Name="REGISTRATION">
+          <Key>
+            <PropertyRef Name="RegistationID" />
+          </Key>
+          <Property Name="RegistationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ClientID" Type="Int32" Nullable="false" />
+          <Property Name="DoctorServiceID" Type="Int32" Nullable="false" />
+          <Property Name="DateID" Type="Int32" Nullable="false" />
+          <Property Name="Status" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="CLIENT" Relationship="Self.FK_REGISTRATION_CLIENT" FromRole="REGISTRATION" ToRole="CLIENT" />
+          <NavigationProperty Name="DOCTOR_SERVICE" Relationship="Self.FK_REGISTRATION_DOCTOR_SERVICE" FromRole="REGISTRATION" ToRole="DOCTOR_SERVICE" />
+          <NavigationProperty Name="REGISTRATION_DATE" Relationship="Self.FK_REGISTRATION_REGISTRATION_DATE" FromRole="REGISTRATION" ToRole="REGISTRATION_DATE" />
+        </EntityType>
+        <EntityType Name="REGISTRATION_DATE">
+          <Key>
+            <PropertyRef Name="DateID" />
+          </Key>
+          <Property Name="DateID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="TimeID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="REGISTRATIONs" Relationship="Self.FK_REGISTRATION_REGISTRATION_DATE" FromRole="REGISTRATION_DATE" ToRole="REGISTRATION" />
+          <NavigationProperty Name="REGISTRATION_TIME" Relationship="Self.FK_REGISTRATION_DATE_REGISTRATION_TIME" FromRole="REGISTRATION_DATE" ToRole="REGISTRATION_TIME" />
+        </EntityType>
+        <EntityType Name="REGISTRATION_TIME">
+          <Key>
+            <PropertyRef Name="TimeID" />
+          </Key>
+          <Property Name="TimeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Time" Type="Time" Precision="7" />
+          <NavigationProperty Name="REGISTRATION_DATE" Relationship="Self.FK_REGISTRATION_DATE_REGISTRATION_TIME" FromRole="REGISTRATION_TIME" ToRole="REGISTRATION_DATE" />
+        </EntityType>
+        <EntityType Name="SERVICE">
+          <Key>
+            <PropertyRef Name="ServiceID" />
+          </Key>
+          <Property Name="ServiceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ServiceName" Type="String" MaxLength="70" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="DOCTOR_SERVICE" Relationship="Self.FK_DOCTOR_SERVICE_SERVICE" FromRole="SERVICE" ToRole="DOCTOR_SERVICE" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <Association Name="FK_DOCTOR_RATING_CLIENT">
+          <End Role="CLIENT" Type="Self.CLIENT" Multiplicity="1" />
+          <End Role="DOCTOR_RATING" Type="Self.DOCTOR_RATING" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CLIENT">
+              <PropertyRef Name="ClientID" />
+            </Principal>
+            <Dependent Role="DOCTOR_RATING">
+              <PropertyRef Name="ClientID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_REGISTRATION_CLIENT">
+          <End Role="CLIENT" Type="Self.CLIENT" Multiplicity="1" />
+          <End Role="REGISTRATION" Type="Self.REGISTRATION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CLIENT">
+              <PropertyRef Name="ClientID" />
+            </Principal>
+            <Dependent Role="REGISTRATION">
+              <PropertyRef Name="ClientID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DOCTOR_RATING_DOCTOR">
+          <End Role="DOCTOR" Type="Self.DOCTOR" Multiplicity="1" />
+          <End Role="DOCTOR_RATING" Type="Self.DOCTOR_RATING" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DOCTOR">
+              <PropertyRef Name="DoctorID" />
+            </Principal>
+            <Dependent Role="DOCTOR_RATING">
+              <PropertyRef Name="DoctorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DOCTOR_SERVICE_DOCTOR">
+          <End Role="DOCTOR" Type="Self.DOCTOR" Multiplicity="1" />
+          <End Role="DOCTOR_SERVICE" Type="Self.DOCTOR_SERVICE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DOCTOR">
+              <PropertyRef Name="DoctorID" />
+            </Principal>
+            <Dependent Role="DOCTOR_SERVICE">
+              <PropertyRef Name="DoctorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DOCTOR_SERVICE_SERVICE">
+          <End Role="SERVICE" Type="Self.SERVICE" Multiplicity="1" />
+          <End Role="DOCTOR_SERVICE" Type="Self.DOCTOR_SERVICE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SERVICE">
+              <PropertyRef Name="ServiceID" />
+            </Principal>
+            <Dependent Role="DOCTOR_SERVICE">
+              <PropertyRef Name="ServiceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_REGISTRATION_DOCTOR_SERVICE">
+          <End Role="DOCTOR_SERVICE" Type="Self.DOCTOR_SERVICE" Multiplicity="1" />
+          <End Role="REGISTRATION" Type="Self.REGISTRATION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DOCTOR_SERVICE">
+              <PropertyRef Name="DoctorServiceID" />
+            </Principal>
+            <Dependent Role="REGISTRATION">
+              <PropertyRef Name="DoctorServiceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_REGISTRATION_REGISTRATION_DATE">
+          <End Role="REGISTRATION_DATE" Type="Self.REGISTRATION_DATE" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="REGISTRATION" Type="Self.REGISTRATION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="REGISTRATION_DATE">
+              <PropertyRef Name="DateID" />
+            </Principal>
+            <Dependent Role="REGISTRATION">
+              <PropertyRef Name="DateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_REGISTRATION_DATE_REGISTRATION_TIME">
+          <End Role="REGISTRATION_TIME" Type="Self.REGISTRATION_TIME" Multiplicity="1" />
+          <End Role="REGISTRATION_DATE" Type="Self.REGISTRATION_DATE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="REGISTRATION_TIME">
+              <PropertyRef Name="TimeID" />
+            </Principal>
+            <Dependent Role="REGISTRATION_DATE">
+              <PropertyRef Name="TimeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="CLINICSEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CLIENTs" EntityType="Self.CLIENT" />
+          <EntitySet Name="DOCTORs" EntityType="Self.DOCTOR" />
+          <EntitySet Name="DOCTOR_RATING" EntityType="Self.DOCTOR_RATING" />
+          <EntitySet Name="DOCTOR_SERVICE" EntityType="Self.DOCTOR_SERVICE" />
+          <EntitySet Name="REGISTRATIONs" EntityType="Self.REGISTRATION" />
+          <EntitySet Name="REGISTRATION_DATE" EntityType="Self.REGISTRATION_DATE" />
+          <EntitySet Name="REGISTRATION_TIME" EntityType="Self.REGISTRATION_TIME" />
+          <EntitySet Name="SERVICEs" EntityType="Self.SERVICE" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <AssociationSet Name="FK_DOCTOR_RATING_CLIENT" Association="Self.FK_DOCTOR_RATING_CLIENT">
+            <End Role="CLIENT" EntitySet="CLIENTs" />
+            <End Role="DOCTOR_RATING" EntitySet="DOCTOR_RATING" />
+          </AssociationSet>
+          <AssociationSet Name="FK_REGISTRATION_CLIENT" Association="Self.FK_REGISTRATION_CLIENT">
+            <End Role="CLIENT" EntitySet="CLIENTs" />
+            <End Role="REGISTRATION" EntitySet="REGISTRATIONs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DOCTOR_RATING_DOCTOR" Association="Self.FK_DOCTOR_RATING_DOCTOR">
+            <End Role="DOCTOR" EntitySet="DOCTORs" />
+            <End Role="DOCTOR_RATING" EntitySet="DOCTOR_RATING" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DOCTOR_SERVICE_DOCTOR" Association="Self.FK_DOCTOR_SERVICE_DOCTOR">
+            <End Role="DOCTOR" EntitySet="DOCTORs" />
+            <End Role="DOCTOR_SERVICE" EntitySet="DOCTOR_SERVICE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DOCTOR_SERVICE_SERVICE" Association="Self.FK_DOCTOR_SERVICE_SERVICE">
+            <End Role="SERVICE" EntitySet="SERVICEs" />
+            <End Role="DOCTOR_SERVICE" EntitySet="DOCTOR_SERVICE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_REGISTRATION_DOCTOR_SERVICE" Association="Self.FK_REGISTRATION_DOCTOR_SERVICE">
+            <End Role="DOCTOR_SERVICE" EntitySet="DOCTOR_SERVICE" />
+            <End Role="REGISTRATION" EntitySet="REGISTRATIONs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_REGISTRATION_REGISTRATION_DATE" Association="Self.FK_REGISTRATION_REGISTRATION_DATE">
+            <End Role="REGISTRATION_DATE" EntitySet="REGISTRATION_DATE" />
+            <End Role="REGISTRATION" EntitySet="REGISTRATIONs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_REGISTRATION_DATE_REGISTRATION_TIME" Association="Self.FK_REGISTRATION_DATE_REGISTRATION_TIME">
+            <End Role="REGISTRATION_TIME" EntitySet="REGISTRATION_TIME" />
+            <End Role="REGISTRATION_DATE" EntitySet="REGISTRATION_DATE" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CLINICSModelStoreContainer" CdmEntityContainer="CLINICSEntities">
+          <EntitySetMapping Name="CLIENTs">
+            <EntityTypeMapping TypeName="CLINICSModel.CLIENT">
+              <MappingFragment StoreEntitySet="CLIENT">
+                <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+                <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+                <ScalarProperty Name="ClientSurname" ColumnName="ClientSurname" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserType" ColumnName="UserType" />
+                <ScalarProperty Name="TelephoneNumber" ColumnName="TelephoneNumber" />
+                <ScalarProperty Name="ClientPatronymic" ColumnName="ClientPatronymic" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DOCTORs">
+            <EntityTypeMapping TypeName="CLINICSModel.DOCTOR">
+              <MappingFragment StoreEntitySet="DOCTOR">
+                <ScalarProperty Name="DoctorID" ColumnName="DoctorID" />
+                <ScalarProperty Name="DoctorName" ColumnName="DoctorName" />
+                <ScalarProperty Name="DoctorSurname" ColumnName="DoctorSurname" />
+                <ScalarProperty Name="DoctorPatronymic" ColumnName="DoctorPatronymic" />
+                <ScalarProperty Name="DoctorImage" ColumnName="DoctorImage" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DOCTOR_RATING">
+            <EntityTypeMapping TypeName="CLINICSModel.DOCTOR_RATING">
+              <MappingFragment StoreEntitySet="DOCTOR_RATING">
+                <ScalarProperty Name="CommentID" ColumnName="CommentID" />
+                <ScalarProperty Name="DoctorID" ColumnName="DoctorID" />
+                <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+                <ScalarProperty Name="Rating" ColumnName="Rating" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DOCTOR_SERVICE">
+            <EntityTypeMapping TypeName="CLINICSModel.DOCTOR_SERVICE">
+              <MappingFragment StoreEntitySet="DOCTOR_SERVICE">
+                <ScalarProperty Name="DoctorServiceID" ColumnName="DoctorServiceID" />
+                <ScalarProperty Name="DoctorID" ColumnName="DoctorID" />
+                <ScalarProperty Name="ServiceID" ColumnName="ServiceID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="REGISTRATIONs">
+            <EntityTypeMapping TypeName="CLINICSModel.REGISTRATION">
+              <MappingFragment StoreEntitySet="REGISTRATION">
+                <ScalarProperty Name="RegistationID" ColumnName="RegistationID" />
+                <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+                <ScalarProperty Name="DoctorServiceID" ColumnName="DoctorServiceID" />
+                <ScalarProperty Name="DateID" ColumnName="DateID" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="REGISTRATION_DATE">
+            <EntityTypeMapping TypeName="CLINICSModel.REGISTRATION_DATE">
+              <MappingFragment StoreEntitySet="REGISTRATION_DATE">
+                <ScalarProperty Name="DateID" ColumnName="DateID" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="TimeID" ColumnName="TimeID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="REGISTRATION_TIME">
+            <EntityTypeMapping TypeName="CLINICSModel.REGISTRATION_TIME">
+              <MappingFragment StoreEntitySet="REGISTRATION_TIME">
+                <ScalarProperty Name="TimeID" ColumnName="TimeID" />
+                <ScalarProperty Name="Time" ColumnName="Time" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SERVICEs">
+            <EntityTypeMapping TypeName="CLINICSModel.SERVICE">
+              <MappingFragment StoreEntitySet="SERVICE">
+                <ScalarProperty Name="ServiceID" ColumnName="ServiceID" />
+                <ScalarProperty Name="ServiceName" ColumnName="ServiceName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="CLINICSModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

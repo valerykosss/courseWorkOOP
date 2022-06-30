@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="300621dd798546698ba5e909c10cb95a" Name="Diagram1">
+        <EntityTypeShape EntityType="CLINICSModel.CLIENT" Width="1.5" PointX="3" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CLINICSModel.DOCTOR" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CLINICSModel.DOCTOR_RATING" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CLINICSModel.DOCTOR_SERVICE" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="CLINICSModel.REGISTRATION" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CLINICSModel.REGISTRATION_DATE" Width="1.5" PointX="3" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="CLINICSModel.REGISTRATION_TIME" Width="1.5" PointX="0.75" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CLINICSModel.SERVICE" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CLINICSModel.sysdiagram" Width="1.5" PointX="5.75" PointY="4.875" IsExpanded="true" />
+        <AssociationConnector Association="CLINICSModel.FK_DOCTOR_RATING_CLIENT" ManuallyRouted="false" />
+        <AssociationConnector Association="CLINICSModel.FK_REGISTRATION_CLIENT" ManuallyRouted="false" />
+        <AssociationConnector Association="CLINICSModel.FK_DOCTOR_RATING_DOCTOR" ManuallyRouted="false" />
+        <AssociationConnector Association="CLINICSModel.FK_DOCTOR_SERVICE_DOCTOR" ManuallyRouted="false" />
+        <AssociationConnector Association="CLINICSModel.FK_DOCTOR_SERVICE_SERVICE" ManuallyRouted="false" />
+        <AssociationConnector Association="CLINICSModel.FK_REGISTRATION_DOCTOR_SERVICE" ManuallyRouted="false" />
+        <AssociationConnector Association="CLINICSModel.FK_REGISTRATION_REGISTRATION_DATE" ManuallyRouted="false" />
+        <AssociationConnector Association="CLINICSModel.FK_REGISTRATION_DATE_REGISTRATION_TIME" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
