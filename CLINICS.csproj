@@ -1,0 +1,562 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Xamarin.Forms.5.0.0.2012\build\Xamarin.Forms.props" Condition="Exists('packages\Xamarin.Forms.5.0.0.2012\build\Xamarin.Forms.props')" />
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{30CAED8A-6DD6-4693-818C-E0A3F43F73ED}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CLINICS</RootNamespace>
+    <AssemblyName>CLINICS</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Toolkit, Version=7.1.0.0, Culture=neutral, PublicKeyToken=4aff67a105548ee2, processorArchitecture=MSIL">
+      <HintPath>packages\Uno.Microsoft.Toolkit.7.1.11\lib\netstandard2.0\Microsoft.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Toolkit.Uwp, Version=7.1.0.0, Culture=neutral, PublicKeyToken=4aff67a105548ee2, processorArchitecture=MSIL">
+      <HintPath>packages\Uno.Microsoft.Toolkit.Uwp.7.1.11\lib\netstandard2.0\Microsoft.Toolkit.Uwp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xaml.Interactions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Uno.Microsoft.Xaml.Behaviors.Uwp.Managed.2.3.0\lib\netstandard2.0\Microsoft.Xaml.Interactions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xaml.Interactivity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Uno.Microsoft.Xaml.Behaviors.Interactivity.2.3.0\lib\netstandard2.0\Microsoft.Xaml.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Core.XForms, Version=20.1451.0.55, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Syncfusion.Xamarin.Core.20.1.0.55\lib\netstandard2.0\Syncfusion.Core.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Licensing, Version=20.1460.0.55, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
+      <HintPath>packages\Syncfusion.Licensing.20.1.0.55\lib\net46\Syncfusion.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfMaskedEdit.XForms, Version=20.1451.0.55, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Syncfusion.Xamarin.SfMaskedEdit.20.1.0.55\lib\netstandard2.0\Syncfusion.SfMaskedEdit.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=1.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Collections.Immutable.1.3.1\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Xamarin.Forms.5.0.0.2012\lib\netstandard2.0\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Xamarin.Forms.5.0.0.2012\lib\netstandard2.0\Xamarin.Forms.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Xamarin.Forms.5.0.0.2012\lib\netstandard2.0\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock, Version=4.3.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>packages\Extended.Wpf.Toolkit.4.3.0\lib\net40\Xceed.Wpf.AvalonDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Aero, Version=4.3.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>packages\Extended.Wpf.Toolkit.4.3.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.Aero.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Metro, Version=4.3.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>packages\Extended.Wpf.Toolkit.4.3.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.VS2010, Version=4.3.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>packages\Extended.Wpf.Toolkit.4.3.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.VS2010.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.Toolkit, Version=4.3.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>packages\Extended.Wpf.Toolkit.4.3.0\lib\net40\Xceed.Wpf.Toolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="adminpages\ClientTable.xaml.cs">
+      <DependentUpon>ClientTable.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="adminpages\DoctorRatingTable.xaml.cs">
+      <DependentUpon>DoctorRatingTable.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="adminpages\DoctorServiceTable.xaml.cs">
+      <DependentUpon>DoctorServiceTable.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="adminpages\DoctorTable.xaml.cs">
+      <DependentUpon>DoctorTable.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="adminpages\MainAdminPage.xaml.cs">
+      <DependentUpon>MainAdminPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="adminpages\RegistrationDateTable.xaml.cs">
+      <DependentUpon>RegistrationDateTable.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="adminpages\RegistrationTable.xaml.cs">
+      <DependentUpon>RegistrationTable.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="adminpages\RegistrationTimeTable.xaml.cs">
+      <DependentUpon>RegistrationTimeTable.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="adminpages\ServiceTable.xaml.cs">
+      <DependentUpon>ServiceTable.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="models\CLIENT.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="models\DOCTOR.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="models\DOCTOR_RATING.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="models\DOCTOR_SERVICE.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="models\Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="models\Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="models\Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="models\REGISTRATION.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="models\REGISTRATION_DATE.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="models\REGISTRATION_TIME.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="models\SERVICE.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="models\sysdiagram.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pages\ChooseDateTime.xaml.cs">
+      <DependentUpon>ChooseDateTime.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\ChooseDoctorListView.xaml.cs">
+      <DependentUpon>ChooseDoctorListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\CommentInputUserControl.xaml.cs">
+      <DependentUpon>CommentInputUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\DoctorHistory.xaml.cs">
+      <DependentUpon>DoctorHistory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\DoctorHistoryUserControl.xaml.cs">
+      <DependentUpon>DoctorHistoryUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\DoctorInfoUserControl.xaml.cs">
+      <DependentUpon>DoctorInfoUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\DoctorRating.xaml.cs">
+      <DependentUpon>DoctorRating.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\DoctorRatingUserControl.xaml.cs">
+      <DependentUpon>DoctorRatingUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\DoctorsButtonUserControl.xaml.cs">
+      <DependentUpon>DoctorsButtonUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\History.xaml.cs">
+      <DependentUpon>History.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\RegistrationsHistoryUserControl.xaml.cs">
+      <DependentUpon>RegistrationsHistoryUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\ServiceButtonUserControl.xaml.cs">
+      <DependentUpon>ServiceButtonUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\TimeButtonUserControl.xaml.cs">
+      <DependentUpon>TimeButtonUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windows\AdminWindow.xaml.cs">
+      <DependentUpon>AdminWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windows\CancelBookingWindow.xaml.cs">
+      <DependentUpon>CancelBookingWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windows\ConfirmBookingWindow.xaml.cs">
+      <DependentUpon>ConfirmBookingWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windows\DoctorInfoWindow.xaml.cs">
+      <DependentUpon>DoctorInfoWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windows\EndServiceByDoctor.xaml.cs">
+      <DependentUpon>EndServiceByDoctor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windows\LeaveCommentWindow.xaml.cs">
+      <DependentUpon>LeaveCommentWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="adminpages\ClientTable.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="adminpages\DoctorRatingTable.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="adminpages\DoctorServiceTable.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="adminpages\DoctorTable.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="adminpages\MainAdminPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="adminpages\RegistrationDateTable.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="adminpages\RegistrationTable.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="adminpages\RegistrationTimeTable.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="adminpages\ServiceTable.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\ChooseDateTime.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\ChooseDoctorListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\CommentInputUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\DoctorHistory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\DoctorHistoryUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\DoctorInfoUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\DoctorRating.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\DoctorRatingUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\DoctorsButtonUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\History.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\RegistrationsHistoryUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\ServiceButtonUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\TimeButtonUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\AdminWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\CancelBookingWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\ConfirmBookingWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\DoctorInfoWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\EndServiceByDoctor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\LeaveCommentWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="windows\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="pages\AboutUs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\ChooseService.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\Profile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\LoginPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\RegistrationPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="styles\ButtonsTemplates.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="pages\AboutUs.xaml.cs">
+      <DependentUpon>AboutUs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\ChooseService.xaml.cs">
+      <DependentUpon>ChooseService.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Profile.xaml.cs">
+      <DependentUpon>Profile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\RegistrationPage.xaml.cs">
+      <DependentUpon>RegistrationPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <EntityDeploy Include="models\Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="models\Model.edmx.diagram">
+      <DependentUpon>Model.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\registrLog.png" />
+    <Resource Include="images\aboutUs.png" />
+    <Resource Include="images\appointment.png" />
+    <Resource Include="images\profile.png" />
+    <Resource Include="icons\aboutUsIcon_active.png" />
+    <Resource Include="icons\aboutUsIcon_inactive.png" />
+    <Resource Include="icons\appointmentIcon_active.png" />
+    <Resource Include="icons\appointmentIcon_inactive.png" />
+    <Resource Include="icons\exitIcon_inactive.png" />
+    <Resource Include="icons\historyIcon_active.png" />
+    <Resource Include="icons\historyIcon_inactive.png" />
+    <Resource Include="icons\profileSettingsIcon_active.png" />
+    <Resource Include="icons\profileSettingsIcon_inactive.png" />
+    <Resource Include="icons\exitIcon_active.png" />
+    <Resource Include="icons\ratingIcon_active.png" />
+    <Resource Include="icons\ratingIcon_inactive.png" />
+    <Resource Include="images\doctors.png" />
+    <Resource Include="images\docWoman_inactive.png" />
+    <Resource Include="images\noPhotoDefault.png" />
+    <Resource Include="images\historyAndDoctorProfile.png" />
+    <Resource Include="icons\Client.png" />
+    <Resource Include="icons\Doctor.png" />
+    <Resource Include="icons\DoctorRating.png" />
+    <Resource Include="icons\DoctorService.png" />
+    <Resource Include="icons\Registration.png" />
+    <Resource Include="icons\RegistrationDate.png" />
+    <Resource Include="icons\RegistrationTime.png" />
+    <Resource Include="icons\Service.png" />
+    <Resource Include="icons\Search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controls\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="docsImages\docMan1.png" />
+    <Resource Include="docsImages\docMan2.png" />
+    <Resource Include="docsImages\docMan3.png" />
+    <Resource Include="docsImages\docWoman1.png" />
+    <Resource Include="docsImages\docWoman2.png" />
+    <Resource Include="docsImages\docWoman3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons\AboutUs.png" />
+    <Resource Include="icons\AboutUs_inactive.png" />
+    <Resource Include="icons\Appointment.png" />
+    <Resource Include="icons\Appointment_inactive.png" />
+    <Resource Include="icons\Client_inactive.png" />
+    <Resource Include="icons\DoctorRating_inactive.png" />
+    <Resource Include="icons\DoctorService_inactive.png" />
+    <Resource Include="icons\Doctor_inactive.png" />
+    <Resource Include="icons\Exit.png" />
+    <Resource Include="icons\Exit_inactive.png" />
+    <Resource Include="icons\History.png" />
+    <Resource Include="icons\History_inactive.png" />
+    <Resource Include="icons\ProfileSettings.png" />
+    <Resource Include="icons\ProfileSettings_inactive.png" />
+    <Resource Include="icons\Rating.png" />
+    <Resource Include="icons\Rating_inactive.png" />
+    <Resource Include="icons\RegistrationDate_inactive.png" />
+    <Resource Include="icons\RegistrationTime_inactive.png" />
+    <Resource Include="icons\Registration_inactive.png" />
+    <Resource Include="icons\Search_inactive.png" />
+    <Resource Include="icons\Service_inactive.png" />
+    <Resource Include="images\Star.png" />
+    <Resource Include="icons\closeSmallWindow.png" />
+    <Resource Include="icons\LeftMove.png" />
+    <Resource Include="icons\RightMove.png" />
+    <Resource Include="icons\closeDocInfoWindow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="docsImages\defaultImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\appointment1.png" />
+    <Resource Include="images\doctors1.png" />
+    <Resource Include="images\historyAndDoctorProfile1.png" />
+    <Resource Include="images\registrLog1.png" />
+    <Resource Include="images\aboutUs1.png" />
+    <Content Include="models\Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="models\Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('packages\Uno.SourceGenerationTasks.4.0.0\build\netstandard1.0\Uno.SourceGenerationTasks.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Uno.SourceGenerationTasks.4.0.0\build\netstandard1.0\Uno.SourceGenerationTasks.targets'))" />
+    <Error Condition="!Exists('packages\Xamarin.Forms.5.0.0.2012\build\Xamarin.Forms.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Xamarin.Forms.5.0.0.2012\build\Xamarin.Forms.props'))" />
+    <Error Condition="!Exists('packages\Xamarin.Forms.5.0.0.2012\build\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Xamarin.Forms.5.0.0.2012\build\Xamarin.Forms.targets'))" />
+  </Target>
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="packages\Uno.SourceGenerationTasks.4.0.0\build\netstandard1.0\Uno.SourceGenerationTasks.targets" Condition="Exists('packages\Uno.SourceGenerationTasks.4.0.0\build\netstandard1.0\Uno.SourceGenerationTasks.targets')" />
+  <Import Project="packages\Xamarin.Forms.5.0.0.2012\build\Xamarin.Forms.targets" Condition="Exists('packages\Xamarin.Forms.5.0.0.2012\build\Xamarin.Forms.targets')" />
+</Project>

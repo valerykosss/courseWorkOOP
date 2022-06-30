@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CLINICS.models.CLINICSEntities">
+    <Position X="16.25" Y="2.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>gAACAAAACAAAAACAAAAAAAAAEAAAAAACQCAAEAAAGAA=</HashCode>
+      <FileName>models\Model.Context.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CLINICS.models.CLIENT">
+    <Position X="11.5" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAIAAAAgAAAAAACAAAAACAACQAAABAAAAAA=</HashCode>
+      <FileName>models\CLIENT.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CLINICS.models.DOCTOR">
+    <Position X="11.5" Y="4.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AgACABAAAAAAAAAAAAAAAAAIAAAAQAAABAAAAAAAEAA=</HashCode>
+      <FileName>models\DOCTOR.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CLINICS.models.DOCTOR_RATING">
+    <Position X="13.75" Y="2.75" Width="1.5" />
+    <AssociationLine Name="CLIENT1" Type="CLINICS.models.CLIENT" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="14.5" Y="2.75" />
+        <Point X="14.5" Y="2.25" />
+        <Point X="13.25" Y="2.25" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AgAAAABEAAIAAAAAAAAgAAAAACAAAAEgAAAAAEAAAAA=</HashCode>
+      <FileName>models\DOCTOR_RATING.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="CLIENT1" />
+      <Property Name="DOCTOR1" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="CLINICS.models.DOCTOR_SERVICE">
+    <Position X="9" Y="4.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AgAAACBAAAAAAAQAAAAAAAgAACAAAAACAAAAAAAAIAA=</HashCode>
+      <FileName>models\DOCTOR_SERVICE.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="SERVICE1" />
+      <Property Name="DOCTOR1" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="CLINICS.models.REGISTRATION">
+    <Position X="9" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAEAAIAAAAAAAAgACAAAAAAAAAAQAAAAEAAMAA=</HashCode>
+      <FileName>models\REGISTRATION.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="CLIENT1" />
+      <Property Name="REGISTRATION_DATE1" />
+      <Property Name="DOCTOR_SERVICE1" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="CLINICS.models.REGISTRATION_DATE">
+    <Position X="6.25" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAACAACAAAAAADAAAAAAAACAA=</HashCode>
+      <FileName>models\REGISTRATION_DATE.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="REGISTRATION_TIME1" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="CLINICS.models.REGISTRATION_TIME">
+    <Position X="3.5" Y="2.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAQAAAAAAAAQA=</HashCode>
+      <FileName>models\REGISTRATION_TIME.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CLINICS.models.SERVICE">
+    <Position X="6.25" Y="4.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFAA=</HashCode>
+      <FileName>models\SERVICE.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
