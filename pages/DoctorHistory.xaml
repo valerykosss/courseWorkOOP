@@ -1,0 +1,42 @@
+﻿<Page x:Class="CLINICS.pages.DoctorHistory"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CLINICS.pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1550"
+      Title="DoctorHistory"
+      FontFamily="Montserrat">
+    <Page.Background>
+        <ImageBrush ImageSource="/images/historyAndDoctorProfile1.png"/>
+    </Page.Background>
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions >
+                <RowDefinition Height="12*"/>
+                <RowDefinition Height="8*"/>
+                <RowDefinition Height="12*"/>
+                <RowDefinition Height="70*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20*"/>
+                <ColumnDefinition Width="80*"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="1" x:Name="CloseWindow" BorderBrush="Transparent" BorderThickness="0" Cursor="Hand" Click='CloseWindow_Click' Height="42" Width="54" Background="Transparent" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0, 15, 15, 0" Panel.ZIndex="1">
+                <Image Source="/icons/Exit_inactive.png"></Image>
+            </Button>
+            <Grid Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2">
+                <StackPanel VerticalAlignment="Center">
+                    <TextBlock Text="Ваши приемы" FontSize="56" FontWeight="Regular" Foreground="White" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+            <ScrollViewer Grid.Row="4" Grid.Column="1" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Disabled">
+                <StackPanel x:Name="bookingDoctorHistory"  Margin="0 0 30 0">
+                </StackPanel>
+            </ScrollViewer>
+            <TextBlock x:Name="inCaseNullBookingsDoc" Visibility="Hidden" TextWrapping="Wrap" TextAlignment="Center"  Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" Margin="0 -100 0 0" VerticalAlignment="Center" Foreground="White" FontSize="26" ></TextBlock>
+        </Grid>
+    </Grid>
+</Page>

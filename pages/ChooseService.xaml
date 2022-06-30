@@ -1,0 +1,159 @@
+﻿<Page x:Class="CLINICS.pages.ChooseService"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CLINICS.pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1550"
+      Title="ChooseService"
+      FontFamily="Montserrat">
+    <Page.Background>
+        <ImageBrush ImageSource="/images/appointment1.png"/>
+    </Page.Background>
+    <Page.Resources>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}" BorderBrush="Transparent" BorderThickness="0">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <!--<Setter Property="Background" Value="Red"/>-->
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <ControlTemplate x:Key="ListBoxItemControlTemplate" TargetType="{x:Type ListBoxItem}">
+            <Border x:Name="Bd" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Opacity="{TemplateBinding Opacity}"  Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}" SnapsToDevicePixels="True">
+                <ContentPresenter ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <MultiTrigger>
+                    <MultiTrigger.Conditions>
+                        <Condition Property="IsMouseOver" Value="True"/>
+                    </MultiTrigger.Conditions>
+                    <!--<Setter Property="Background" TargetName="Bd" Value="white"/>-->
+                    <Setter Property="BorderBrush" TargetName="Bd" Value="black"/>
+                    <Setter Property="CornerRadius" TargetName="Bd" Value="40"/>
+                    <Setter Property="Opacity" TargetName="Bd" Value="0.5"/>
+                </MultiTrigger>
+                <MultiTrigger>
+                    <MultiTrigger.Conditions>
+                        <Condition Property="Selector.IsSelectionActive" Value="False"/>
+                        <Condition Property="IsSelected" Value="True"/>
+                    </MultiTrigger.Conditions>
+                    <Setter Property="Background" TargetName="Bd" Value="white"/>
+                    <Setter Property="BorderBrush" TargetName="Bd" Value="white"/>
+                </MultiTrigger>
+                <MultiTrigger>
+                    <MultiTrigger.Conditions>
+                        <Condition Property="Selector.IsSelectionActive" Value="True"/>
+                        <Condition Property="IsSelected" Value="True"/>
+                    </MultiTrigger.Conditions>
+                    <Setter Property="Background" TargetName="Bd" Value="white"/>
+                    <Setter Property="BorderBrush" TargetName="Bd" Value="white"/>
+                </MultiTrigger>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter Property="TextElement.Foreground" TargetName="Bd" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+
+    </Page.Resources>
+
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions >
+                <RowDefinition Height="12*"/>
+                <RowDefinition Height="8*"/>
+                <RowDefinition Height="12*"/>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="9*"/>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="9*"/>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="22*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="23*"/>
+                <ColumnDefinition Width="29*"/>
+                <ColumnDefinition Width="6*"/>
+                <ColumnDefinition Width="29*"/>
+                <ColumnDefinition Width="14*"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="4" x:Name="CloseWindow" BorderBrush="Transparent" BorderThickness="0" Cursor="Hand" Click='CloseWindow_Click' Height="42" Width="54" Background="Transparent" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0, 15, 15, 0" Panel.ZIndex="1">
+                <Image Source="/icons/Exit_inactive.png"></Image>
+            </Button>
+            <Grid Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3">
+                <StackPanel VerticalAlignment="Center">
+                    <TextBlock Text="Выберите услугу" FontSize="56" FontWeight="Regular" Foreground="White" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Row="3" Grid.Column="1" Grid.RowSpan="5" Grid.ColumnSpan="3">
+                <TextBlock x:Name="inCaseNullServ" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="5" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="26" ></TextBlock>
+                <ListView x:Name="ServicesItemsControl" Background="Transparent" BorderThickness="0" ScrollViewer.VerticalScrollBarVisibility="Hidden"  ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalContentAlignment="Center">
+                    <!---MouseDoubleClick="ServicesListView_MouseDoubleClick"-->
+                    <ListView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center"></WrapPanel>
+                        </ItemsPanelTemplate>
+                    </ListView.ItemsPanel>
+                    <ListView.ItemContainerStyle>
+                        <Style TargetType="ListViewItem">
+                            <Setter Property="Template" Value="{DynamicResource ListBoxItemControlTemplate}"/>
+                            <Setter Property="BorderThickness" Value="0"/>
+                            <Setter Property="Margin" Value="10 0 10 35"/>
+                            <Setter Property="Padding" Value="0"/>
+                            <Setter Property="Focusable" Value="False"/>
+                            <Style.Triggers>
+                                <MultiTrigger>
+                                    <MultiTrigger.Conditions>
+                                        <Condition Property="IsSelected" Value="True" />
+                                        <Condition Property="IsMouseOver" Value="False" />
+                                    </MultiTrigger.Conditions>
+                                    <MultiTrigger.Setters>
+                                        <Setter Property="Background" Value="{x:Null}" />
+                                        <Setter Property="BorderBrush" Value="{x:Null}" />
+                                    </MultiTrigger.Setters>
+                                </MultiTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </ListView.ItemContainerStyle>
+                </ListView>
+            </Grid>
+
+            <!--<Grid Grid.Row="3" Grid.Column="1" Grid.RowSpan="5" Grid.ColumnSpan="3">
+                <ItemsControl x:Name="ServicesItemsControl" ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.Style>
+                        <Style TargetType="ItemsControl">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type ItemsControl}">
+                                        <ScrollViewer CanContentScroll="True">
+                                            <ItemsPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                                        </ScrollViewer>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </ItemsControl.Style>
+                </ItemsControl>
+            </Grid>-->
+        </Grid>
+    </Grid>
+</Page>

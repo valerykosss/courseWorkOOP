@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="CLINICS.pages.DoctorInfoUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CLINICS.pages"
+             mc:Ignorable="d" 
+             d:DesignHeight="720" d:DesignWidth="650" FontFamily="Montserrat">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50*"></ColumnDefinition>
+            <ColumnDefinition Width="7*"></ColumnDefinition>
+            <ColumnDefinition Width="50*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="60*"/>
+        </Grid.RowDefinitions>
+        <Image Grid.Column="0" Grid.Row="1" Source="docsImages/docMan1.png"></Image>
+        <StackPanel Grid.Row="1" Grid.Column="2">
+            <TextBlock Margin="0 0 0 10" FontWeight="Light" FontStyle="Italic" FontSize="20" Foreground="White">Врач:</TextBlock>
+            <TextBlock Margin="0 0 0 30" Grid.Column="2" TextWrapping="Wrap" HorizontalAlignment="Center" FontSize="24" Foreground="White">Одинцова Алиса Викторовна</TextBlock>
+            <TextBlock Margin="0 0 0 10" Grid.Column="2" FontWeight="Light" FontStyle="Italic" FontSize="20" Foreground="White">Проводимые процедуры:</TextBlock>
+            <TextBlock Margin="0 0 0 30" Grid.Column="2" TextWrapping="Wrap" HorizontalAlignment="Center" FontSize="24" Foreground="White">Абдоминопластика, Пластика шеи, Ринопластика</TextBlock>
+            <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="2">
+                <TextBlock FontWeight="Light" FontStyle="Italic" FontSize="20" Foreground="White" Margin="0 0 15 0"> Рейтинг:</TextBlock>
+                <Image  VerticalAlignment="Bottom" Height="24" x:Name="ratingIcon" Margin="0 0 7 0" />
+                <TextBlock x:Name="rating" Width="30"  FontSize="24" FontWeight="Regular" Foreground="White"/>
+            </StackPanel>
+        </StackPanel>
+        <TextBlock Grid.Column="0" Grid.Row="2" Margin="0 0 0 10" FontWeight="Light" FontStyle="Italic" FontSize="20" Foreground="White">Отзывы пациентов:</TextBlock>
+        <ScrollViewer Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="3" >
+            <ItemsControl Visibility="Visible" Height="auto" Width="auto" x:Name="commentItemsControl" ItemsSource="{Binding Comments}" VerticalAlignment="Top" HorizontalAlignment="Center">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock TextWrapping="Wrap" Margin="10 10 10 10" TextAlignment="Center" Text="{Binding}" VerticalAlignment="Top" HorizontalAlignment="Center" FontStyle="Italic" Foreground="White" FontWeight="UltraLight" FontSize="16" />
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+        </ScrollViewer>
+    </Grid>
+
+</UserControl>
