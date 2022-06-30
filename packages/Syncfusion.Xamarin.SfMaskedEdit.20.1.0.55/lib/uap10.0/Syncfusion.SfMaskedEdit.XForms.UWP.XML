@@ -1,0 +1,1917 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Syncfusion.SfMaskedEdit.XForms.UWP</name>
+    </assembly>
+    <members>
+        <member name="T:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEditMapping">
+            <summary>
+            MaskedEdit busy indicator mapping. 
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEditMapping.maskedEdit">
+            <summary>
+            The busy indicator.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEditMapping.scope">
+            <summary>
+            Represents keyboard type.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEditMapping.scopeName">
+            <summary>
+            Represents keyboard names.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEditMapping.OnSfMaskedEditPropertiesChanged(System.String,Syncfusion.XForms.MaskedEdit.SfMaskedEdit,Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit)">
+            <summary>
+            Raises the masked Edit properties changed event.
+            </summary>
+            <param name="propertyName">Property name.</param>
+            <param name="formsSfmaskedEdit">Forms busy indicator.</param>
+            <param name="nativeSfmaskedEdit">Native busy indicator.</param>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEditMapping.UpdateHorizontalTextAlignment(Syncfusion.XForms.MaskedEdit.SfMaskedEdit)">
+            <summary>
+            Updates the horizontal text alignment based on flow direction.
+            </summary>
+            <param name="formsSfmaskedEdit">forms masked edit.</param>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEditMapping.GetAlignment(Xamarin.Forms.EffectiveFlowDirection,Xamarin.Forms.TextAlignment)">
+            <summary>
+            Updates the alignment on flow direction changes.
+            </summary>
+            <param name="effectiveFlowDirection">flow direction</param>
+            <param name="horizontalTextAlignment">horizontal text alignment</param>
+            <returns>Current text alignment based on flow direction.</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEditMapping.UpdateNativeKeyboard(Syncfusion.XForms.MaskedEdit.SfMaskedEdit)">
+            <summary>
+            Updates the keyboard for the edit text
+            </summary>
+            <param name="formsSfMaskedEdit">the forms masked edit</param>
+        </member>
+        <member name="T:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper">
+            <summary>
+            Helper class to access common functionalities of Android/iOS
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.maskedEdit">
+            <summary>
+            Field which represents the control
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.quantifiersCollection">
+            <summary>
+            Field which represent maximum range regex collection
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.updatedProperties">
+            <summary>
+            Field to store updated properties
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.isGroupRender">
+            <summary>
+            Field to indicate group rendering
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.canRetrieveInnerElement">
+            <summary>
+            Field to indicate to retrieve inner group
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.currentGroupData">
+            <summary>
+            Field to indicate current group mask data
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.checkMaximum">
+            <summary>
+            Field indicate to check maximum range
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.innerGroupIndex">
+            <summary>
+            Field represent inner group index
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.maskedEditValue">
+            <summary>
+            Field represent the value.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.#ctor(Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper"/> class
+            </summary>
+            <param name="maskedEdit">masked edit</param>
+        </member>
+        <member name="P:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.EscSeqCount">
+            <summary>
+            Gets or sets the escape sequence(\\) count which given in Mask.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.RewriteText(System.String,System.Int32,System.Int32,System.String,System.Boolean)">
+            <summary>
+            Method to remove and update text with prompt char
+            </summary>
+            <param name="originalText">the text</param>
+            <param name="index">the index </param>
+            <param name="count">the count to remove from start index</param>
+            <param name="insertText">insert text</param>
+            <param name="needRemove">indicates to remove and update text</param>
+            <returns>returns the updated text</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.IsASCIIAlphanumeric(System.Char)">
+            <summary>
+            Check is American Standard Code for Information Interchange or Alphanumeric character.
+            </summary>
+            <param name="c">input char</param>
+            <returns>true or false</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.ResetMaskProperties">
+            <summary>
+            Method to reset the Mask properties
+            </summary>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.CreateTextMaskProperties">
+            <summary>
+            Create the Text Mask properties
+            </summary>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.ValidateText">
+            <summary>
+            Validates text to ensure whether rendered text has errors
+            </summary>
+            <returns>returns boolean indicating has error</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.RegExBackspace(System.Int32,System.Boolean)">
+            <summary>
+            Remove the character in the caret index for regex type
+            </summary>
+            <param name="caretIndex">current character at index</param>
+            <param name="isSkipLiteral">boolean indicates whether we need to skip literals</param>
+            <returns>Returns the next character at position to remove</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.RegExDelete(System.Int32,System.Int32@)">
+            <summary>
+            Remove the character in the caret index for type
+            </summary>
+            <param name="caretIndex">current caret index</param>
+            <param name="caretEnd">caret end position</param>
+            <returns>Returns the next caret position to remove</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.TextBackspace(System.Int32,System.Boolean)">
+            <summary>
+            Remove the character in the caret index for Text type
+            </summary>
+            <param name="caretIndex">current caret index</param>
+            <param name="isSkipLiteral">boolean indicates whether we need to skip literals</param>
+            <returns>Returns the next caret position to remove</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.TextDelete(System.Int32)">
+            <summary>
+            Remove the character in the caret index for Text type
+            </summary>
+            <param name="caretIndex">current caret index</param>
+            <returns>Returns the next caret position to remove</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.BackSpace(System.Int32,System.Int32)">
+            <summary>
+            Method to handle the backspace
+            </summary>
+            <param name="endIndex">End index</param>
+            <param name="startIndex">Start index</param>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.SetValueFromText">
+            <summary>
+            Method to update Value from Text
+            </summary>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.MoveToPrompt(System.Int32)">
+            <summary>
+            Method to move to next available prompt char
+            </summary>
+            <param name="startIndex">the current position</param>
+            <returns>returns index of next available prompt character</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.ModifyPromptOnFocus(System.Boolean)">
+            <summary>
+            Modifies prompt characters according to control focus
+            </summary>
+            <param name="isRemove">indicates whether to remove prompt characters</param>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.OnMaskTypeChanged">
+            <summary>
+            Handles if MaskType changed
+            </summary>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.OnHidePromptOnLeave">
+            <summary>
+            Method handles when hide prompt on leave changed
+            </summary>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.OnMaskChanged">
+            <summary>
+            Handles if Mask Changed
+            </summary>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.OnPasswordCharChanged(System.Char)">
+            <summary>
+            Handles when password character changed
+            </summary>
+            <param name="prevPassword">previous password</param>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.OnPromptCharChanged(System.Char)">
+            <summary>
+            Handles when prompt character changed
+            </summary>
+            <param name="prevValue">the prompt character</param>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.OnCultureChanged(System.Globalization.CultureInfo)">
+            <summary>
+            Method handles when culture changed
+            </summary>
+            <param name="previousCulture">it denotes the previous culture</param>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.OnCutCopy(System.Int32,System.Int32)">
+            <summary>
+            Handled to copy the mask data based on CutCopyMaskFormat to clipboard
+            </summary>
+            <param name="startIndex">Start Index</param>
+            <param name="endIndex">End index</param>
+            <returns>Clipboard data</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.MatchWithMask(System.Char,System.Boolean,System.Boolean)">
+            <summary>
+            Indicates whether the typed char is matched with mask
+            </summary>
+            <param name="typedChar">the typed char</param>
+            <param name="matchLiteral">boolean indicates value match</param>
+            <param name="isKeyPress">boolean indicates key press</param>
+            <returns>returns whether the character is matched</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.SetTextFromValue">
+            <summary>
+            Method to set Text from Value property
+            </summary>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.LoadTextBox">
+            <summary>
+            Loads the edit text with default display text
+            </summary>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.GetMaskProperty(System.Int32,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Char)">
+            <summary>
+            Get the Mask Property of the current caret position
+            </summary>
+            <param name="caretIndex">Current caret position</param>
+            <param name="isSkipLiteral">Boolean indicates whether need to skip literals</param>
+            <param name="findPrevMask">Boolean indicate whether we need to find the previous mask property if current mask is literal</param>
+            <param name="isMoveCursor">Boolean indicate whether we need to move the cursor position</param>
+            <param name="isRegExRemove">Boolean indicate whether we need to remove regex</param>
+            <param name="typedChar">typed character</param>
+            <returns>MaskProperty of the current caret position</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.UpdateCursorPositionOnFocus">
+            <summary>
+            Finds the current cursor position and place the cursor in the last typed position on focus.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.IsMatch(System.String,System.String)">
+            <summary>
+            Method to check whether the input is matched
+            </summary>
+            <param name="input">the input</param>
+            <param name="pattern">the pattern</param>
+            <returns>indicates it is matched or not</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.ReverseData(System.String)">
+            <summary>
+            Method to reverse the data
+            </summary>
+            <param name="dataToReverse">the data to reverse </param>
+            <returns>returns the reversed data</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.CheckIsMatchedMinimum(System.String,Syncfusion.XForms.MaskedEdit.MaskProperties)">
+            <summary>
+            Method to ensure whether the data matched with minimum count
+            </summary>
+            <param name="data">the data</param>
+            <param name="property">the mask property</param>
+            <returns>returns the boolean indicating whether it is matched or not</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.UpdateAdjacentIndexForGrouping(Syncfusion.XForms.MaskedEdit.MaskProperties,System.Int32)">
+            <summary>
+            Method to update adjacent index for group elements
+            </summary>
+            <param name="groupProperties">the group properties</param>
+            <param name="difference">The difference</param>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.UpdateIndexForInnerGroup(Syncfusion.XForms.MaskedEdit.MaskProperties,System.Int32,System.Int32)">
+            <summary>
+            Method to update index for inner mask group
+            </summary>
+            <param name="innerGroup">inner group</param>
+            <param name="fromIndex">from index</param>
+            <param name="difference">The difference</param>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.FindInnerGroup(Syncfusion.XForms.MaskedEdit.MaskProperties,System.Int32)">
+            <summary>
+            Method to find the inner mask
+            </summary>
+            <param name="properties">the mask property</param>
+            <param name="caretIndex">the caret index</param>
+            <returns>returns the inner mask</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.MatchDataWithGroupElement(Syncfusion.XForms.MaskedEdit.MaskProperties,System.String@,System.Collections.Generic.Dictionary{Syncfusion.XForms.MaskedEdit.MaskProperties,System.String})">
+            <summary>
+            Method to match group element data
+            </summary>
+            <param name="property">the mask property</param>
+            <param name="remainingData">remaining data</param>
+            <param name="passedGroupProperty">passed group collection</param>
+            <returns>returns true if it is matched</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.MatchContent(Syncfusion.XForms.MaskedEdit.MaskProperties,System.String@,System.String@)">
+            <summary>
+            Method to match data with required information
+            </summary>
+            <param name="property">the property</param>
+            <param name="dataToMatch">the data to match</param>
+            <param name="remainingData">remaining data</param>
+            <returns>boolean indicates whether the data has been matched</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.RemoveLiteralCharacters(System.String)">
+            <summary>
+            Removes the literal characters from the typed string.
+            </summary>
+            <param name="typedString">Typed string</param>
+            <returns>Returns the removed literal string.</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.MatchAdjacentMaskWrapper(System.Char,Syncfusion.XForms.MaskedEdit.MaskProperties,System.Int32)">
+            <summary>
+            Check whether the typed character is matched in the adjacent mask property
+            </summary>
+            <param name="typedChar">Typed character</param>
+            <param name="property">Current mask property</param>4
+            <param name="caretIndex">Current character at index</param>
+            <returns>Returns true, if it is matched. Otherwise false.</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.FindNonOptionalMask(Syncfusion.XForms.MaskedEdit.MaskProperties,System.Boolean@)">
+            <summary>
+            Method to find non optional mask elements
+            </summary>
+            <param name="currentMask">the current mask</param>
+            <param name="canUpdateOptional">can update optional</param>
+            <returns>returns the non-optional mask</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.FindExactMatch(System.Int32,System.Char,System.Int32)">
+            <summary>
+            Method to find data to match with previous element
+            </summary>
+            <param name="caretIndex">the caret index</param>
+            <param name="typedChar">the typed char</param>
+            <param name="endIndex">the end index</param>
+            <returns>returns the boolean indicating whether it has been matched</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.CanUpdateQunatifier(System.Int32)">
+            <summary>
+            Method to indicate whether to update quantifier
+            </summary>
+            <param name="caretIndex">the caret index</param>
+            <returns>returns true or false</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.CanUpdateFirst(System.Int32,System.Int32)">
+            <summary>
+            Method to verify whether to update at first.
+            </summary>
+            <param name="caretIndex">the caret index</param>
+            <param name="endIndex">the end index</param>
+            <returns>returns true, if can update at first</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.ResetGroupMask(Syncfusion.XForms.MaskedEdit.MaskProperties)">
+            <summary>
+            Method to reset mask data
+            </summary>
+            <param name="properties">the mask property</param>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.WrapperCount">
+            <summary>
+            Method to retrieve minimum count of mask collection
+            </summary>
+            <returns>the count</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.MatchBackspacedRegex(System.Int32,System.Int32,System.String)">
+            <summary>
+            Checks whether the mask is passed
+            </summary>
+            <param name="caretIndex">the caret index</param>
+            <param name="optionalIndex">the optional index</param>
+            <param name="data">the mask data </param>
+            <returns>returns boolean indicates whether the mask is matched</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.UpdateMinimum(System.Int32)">
+            <summary>
+            Method to update minimum prompt for mask data
+            </summary>
+            <param name="index">the index</param>
+            <returns>returns the mask data</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.MatchOptional(Syncfusion.XForms.MaskedEdit.MaskProperties,System.String@,System.Boolean)">
+            <summary>
+            Method used to verify the optional element
+            </summary>
+            <param name="property">the optional property</param>
+            <param name="data">mask data</param>
+            <param name="acceptMinimum">accept minimum</param>
+            <returns>returns boolean indicating whether the data has been matched</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.GenerateRegexData(System.Int32,System.Int32)">
+            <summary>
+            Method to retrieve regex data from optional index
+            </summary>
+            <param name="caretIndex">the caret position</param>
+            <param name="optionalIndex">the optional index</param>
+            <returns>returns the mask data</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.GenerateGroupingData(Syncfusion.XForms.MaskedEdit.MaskProperties)">
+            <summary>
+            Method to generate grouping data
+            </summary>
+            <param name="groupProperty">the group property</param>
+            <returns>returns the data</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.BackSpaceLiteral(Syncfusion.XForms.MaskedEdit.MaskProperties,System.String,System.Int32)">
+            <summary>
+            Method to handle backspace for literal
+            </summary>
+            <param name="property">the property</param>
+            <param name="maskdata">the mask data</param>
+            <param name="caretIndex">the caret index</param>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.RemoveOptionalData(Syncfusion.XForms.MaskedEdit.MaskProperties,System.String)">
+            <summary>
+            Method to remove optional data in a group once all the data has been erased.
+            </summary>
+            <param name="property">the mask property</param>
+            <param name="originalText">the text</param>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.GetDataFromCurrentMask(Syncfusion.XForms.MaskedEdit.MaskProperties,System.Boolean,System.Boolean)">
+            <summary>
+            Method to get data from current mask
+            </summary>
+            <param name="properties">the mask properties</param>
+            <param name="isGroupOptional">is group optional</param>
+            <param name="isLiteral">is literal</param>
+            <returns>returns data from current mask</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.UpdateLiteral(System.Int32,Syncfusion.XForms.MaskedEdit.MaskProperties,System.Char)">
+            <summary>
+            Method to update literal data
+            </summary>
+            <param name="caretIndex">the caret index</param>
+            <param name="property">the mask property</param>
+            <param name="typedChar">the typed character</param>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.RetrieveMaskLength(Syncfusion.XForms.MaskedEdit.MaskProperties)">
+            <summary>
+            Method to retrieve individual group mask length
+            </summary>
+            <param name="properties">the group mask</param>
+            <returns>returns the mask</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.MatchWithPrevOptionalMask(System.Char,System.Int32)">
+            <summary>
+            Match with previous Optional element
+            </summary>
+            <param name="typedChar">typed char</param>
+            <param name="caretIndex">caret index</param>
+            <returns>returns the caret position</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.MatchGroup(Syncfusion.XForms.MaskedEdit.MaskProperties,System.Char,System.Int32,System.Boolean,System.Int32,System.String@,System.Int32@)">
+            <summary>
+            Method to match group regex
+            </summary>
+            <param name="property">the mask property</param>
+            <param name="typedChar">typed char</param>
+            <param name="caretIndex">the caret index</param>
+            <param name="removePrompt">remove prompt</param>
+            <param name="unchangedEndIndex">from index back track</param>
+            <param name="remainingData">remaining data</param>
+            <param name="endIndex">end index</param>
+            <returns>Returns true or false</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.GenerateTextForGrouping(Syncfusion.XForms.MaskedEdit.MaskProperties,System.Char,System.Int32,System.Boolean)">
+            <summary>
+            Method to generate text for grouping 
+            </summary>
+            <param name="groupMask">group mask</param>
+            <param name="typedChar">typed character</param>
+            <param name="caretIndex">caret index</param>
+            <param name="includeTypedChar">include typedChar</param>
+            <returns>returns group text</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.GetInnerMaskProperty(Syncfusion.XForms.MaskedEdit.MaskProperties,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Method to retrieve inner mask property in the group
+            </summary>
+            <param name="property">the group mask</param>
+            <param name="caretIndex">caret index</param>
+            <param name="groupIndex">group index</param>
+            <param name="checkMaxRange">to check maximum range</param>
+            <returns>returns the mask property</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.FindNextMask(System.Int32)">
+            <summary>
+            Method to find next available mask
+            </summary>
+            <param name="caretIndex">the caret index</param>
+            <returns>the mask properties</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.BackTrackGrouping(Syncfusion.XForms.MaskedEdit.MaskProperties,System.String@,System.Collections.Generic.Dictionary{Syncfusion.XForms.MaskedEdit.MaskProperties,System.String},System.Int32,System.Char)">
+            <summary>
+            Method to back track grouping
+            </summary>
+            <param name="groupProperties">the group properties</param>
+            <param name="remainingData">remaining data</param>
+            <param name="passedGroupProperty">passed group collection</param>
+            <param name="caretIndex">the caret index</param>
+            <param name="typedChar">typed char</param>
+            <returns>Returns true or false</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.FindCurrentGroupEndIndex(Syncfusion.XForms.MaskedEdit.MaskProperties,System.Boolean)">
+            <summary>
+            Method to find current group end index
+            </summary>
+            <param name="property">the mask property</param>
+            <param name="removePrompt">to remove prompt</param>
+            <returns>returns the end index</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.MoveToNonOptionalMask(Syncfusion.XForms.MaskedEdit.MaskProperties)">
+            <summary>
+            Method to find non-optional mask property
+            </summary>
+            <param name="nextProp">the mask property</param>
+            <returns>return non optional mask</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.UpdateFailedMask(Syncfusion.XForms.MaskedEdit.MaskProperties)">
+            <summary>
+            Method to update failed mask details
+            </summary>
+            <param name="property">the mask property</param>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.RemovePrompt(Syncfusion.XForms.MaskedEdit.MaskProperties)">
+            <summary>
+            Method to remove the prompt characters
+            </summary>
+            <param name="property">the mask property</param>
+            <returns>returns the mask data</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.UpdateMatchedMaskData(System.Collections.Generic.Dictionary{Syncfusion.XForms.MaskedEdit.MaskProperties,System.String},System.Boolean)">
+            <summary>
+            Method to update matched data in mask wrapper
+            </summary>
+            <param name="updatedMaskProperties">the updated properties</param>
+            <param name="regexRemove">regex to remove</param>
+            <returns>returns the selection start</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.GenerateMaskText(System.Boolean)">
+            <summary>
+            Method to generate mask text
+            </summary>
+            <param name="removePrompt">remove prompt</param>
+            <returns>returns the mask text</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.RetrieveData(System.Int32,System.Int32)">
+            <summary>
+            Method to retrieve data
+            </summary>
+            <param name="index">the start index</param>
+            <param name="endIndex">end index</param>
+            <returns>returns the data</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.UpdatePrompt(Syncfusion.XForms.MaskedEdit.MaskProperties)">
+            <summary>
+            Method to update prompt
+            </summary>
+            <param name="property">the mask property</param>
+            <returns>returns the updated data</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.HasPrevElementGroup(System.Int32)">
+            <summary>
+            Method to ensure whether previous element is group
+            </summary>
+            <param name="caretIndex">the caret index</param>
+            <returns>returns true if previous element is group</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.GetNextPromtMask(System.Int32)">
+            <summary>
+            Get the next Prompt mask property
+            </summary>
+            <param name="index">Index of current mask property</param>
+            <returns>Next mask property of current index</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.GetPrevPromtMask(System.Int32)">
+            <summary>
+            Get the previous Prompt mask property
+            </summary>
+            <param name="index">Index of current mask property</param>
+            <returns>Previous mask property of current index</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.MatchRegExInput(System.Char,Syncfusion.XForms.MaskedEdit.MaskProperties,System.Int32)">
+            <summary>
+            Check the current typed character is matched to current position of the mask
+            </summary>
+            <param name="typedChar">Typed character</param>
+            <param name="property">Current mask property</param>
+            <param name="caretIndex">Current caret index</param>
+            <returns>Returns true, if it is matched. Otherwise false.</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.GetPasswordData(Syncfusion.XForms.MaskedEdit.MaskProperties,System.String)">
+            <summary>
+            Method to retrieve the password data
+            </summary>
+            <param name="properties">the mask property</param>
+            <param name="maskData">mask data</param>
+            <returns>returns the password data</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.UpdateAdjacentMaskPeoprtyIndex(System.Int32,System.Int32)">
+            <summary>
+            Update the adjacent mask properties start and end index for each key press or backspace.
+            </summary>
+            <param name="diff">Difference to update</param>
+            <param name="startIndex">Start index of the adjacent mask</param>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.UpdatePreviousAdjacent(System.Int32,System.Char,System.Int32,Syncfusion.XForms.MaskedEdit.MaskProperties)">
+            <summary>
+            Method to update previous element
+            </summary>
+            <param name="maskIndex">the mask index</param>
+            <param name="typedChar">the typed character</param>
+            <param name="caretIndex">the caret index</param>
+            <param name="property">mask property</param>
+            <returns>indicates whether it has matched</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.UpdateNextAdjacent(System.Int32,System.Char,System.Int32)">
+            <summary>
+            Method to update next element
+            </summary>
+            <param name="maskIndex">the mask index</param>
+            <param name="typedChar">the typed char</param>
+            <param name="caretIndex">the caret index</param>
+            <returns>indicates whether it has matched</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.MatchInput(System.Char,Syncfusion.XForms.MaskedEdit.MaskProperties,System.Int32)">
+            <summary>
+            Check whether the typed character is matched to current mask
+            </summary>
+            <param name="typedChar">Typed character</param>
+            <param name="property">Current mask property</param>
+            <param name="caretIndex">Current character index</param>
+            <returns>Returns true, if it is matched. Otherwise false.</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.MatchWithOptional(System.Char,System.Int32)">
+            <summary>
+            Method to match with optional   
+            </summary>
+            <param name="typedChar">the typed character</param>
+            <param name="caretIndex">the caret index</param>
+            <returns>indicates whether it has been matched</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.CreateRegExMaskProperties">
+            <summary>
+            Create the regex Mask properties
+            </summary>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.AddAlternation(System.Int32)">
+            <summary>
+            Method to add alternation elements in group
+            </summary>
+            <param name="startIndex">from index</param>
+            <returns>Returns observable collection</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.OnTextCutCopy(System.Int32,System.Int32)">
+            <summary>
+            Handled to copy the mask data based on CutCopyMaskFormat to clipboard
+            </summary>
+            <param name="startIndex">Start Index</param>
+            <param name="endIndex">End index</param>
+            <returns>Clipboard data</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.OnRegExCutCopy(System.Int32,System.Int32)">
+            <summary>
+            Handled to copy the mask data based on CutCopyMaskFormat to clipboard
+            </summary>
+            <param name="startIndex">Start Index</param>
+            <param name="endIndex">End index</param>
+            <returns>Clipboard data</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.RegenerateDisplayText">
+            <summary>
+            regenerate the display text
+            </summary>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.UpdateGrouping(Syncfusion.XForms.MaskedEdit.MaskProperties,System.Int32,System.Char)">
+            <summary>
+            Method to update and match with group elements
+            </summary>
+            <param name="property">the mask property</param>
+            <param name="caretIndex">the caret index</param>
+            <param name="typedChar">typed character</param>
+            <returns>returns true if it is matched otherwise false</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.UpdateMaskGroup(Syncfusion.XForms.MaskedEdit.MaskProperties,System.Int32,System.Int32)">
+            <summary>
+            Method to update mask group
+            </summary>
+            <param name="property">the mask property</param>
+            <param name="caretIndex">the caret index</param>
+            <param name="currentGroupIndex">current group index</param>
+            <returns>returns true if it is updated</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.FindEndIndex(System.Collections.ObjectModel.ObservableCollection{Syncfusion.XForms.MaskedEdit.MaskProperties},System.Int32,System.Int32@,System.Boolean)">
+            <summary>
+            Method to find end index for particular mask group
+            </summary>
+            <param name="groupCollection">the group collection</param>
+            <param name="startIndex">start index</param>
+            <param name="currentMaskIndex">the current mask index in a group</param>
+            <param name="isAlternation">Is alternation</param>
+            <returns>returns the minimum index for grouping</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.UpdateIndexAndMaskDataForGroup(Syncfusion.XForms.MaskedEdit.MaskProperties,System.Int32,System.Boolean)">
+            <summary>
+            Method to update index and mask data for group
+            </summary>
+            <param name="property">the mask property</param>
+            <param name="startIndex">the start index</param>
+            <param name="isAlternation">Is alternation</param>
+            <returns>returns end index for a group</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.GenerateDisplayText">
+            <summary>
+            Method to generate display text.
+            </summary>
+            <returns>returns the display text</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.UpdateMaskWrapper">
+            <summary>
+            Method to update mask wrapper.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.GenerateGroupingDisplayText(Syncfusion.XForms.MaskedEdit.MaskProperties)">
+            <summary>
+            Method to generate display text for grouping
+            </summary>
+            <param name="currentProp">the current mask property</param>
+            <returns>returns the display text for grouping</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.GenerateWrapper">
+            <summary>
+            Method to generate mask wrapper
+            </summary>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.GenerateTextForPassword(System.Boolean)">
+            <summary>
+            Method to generate display text
+            </summary>
+            <param name="isPassword">indicates whether to update password for prompt property</param>
+            <returns>returns the masked text</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.UpdatePromptChar(Syncfusion.XForms.MaskedEdit.MaskProperties,System.Char)">
+            <summary>
+            Method to update prompt character for mask data
+            </summary>
+            <param name="property">the mask property</param>
+            <param name="prevValue">previous value</param>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.MaskHelper.GetValueString">
+            <summary>
+            Calculate the value string based on the literal and prompt character.
+            </summary>
+            <returns>returns value string.</returns>
+        </member>
+        <member name="T:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEditRenderer">
+            <summary>
+             MaskedEdit busy indicator renderer.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEditRenderer.formsSfMaskedEdit">
+            <summary>
+            The busy indicator.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEditRenderer.nativeSfMaskedEdit">
+            <summary>
+            The native busy indicator.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEditRenderer.maskedEditMapping">
+            <summary>
+            The Masked Edit mapping.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEditRenderer.Init">
+            <summary>
+            Initialize the renderer
+            </summary>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEditRenderer.GetPropertiesChanged(System.Type,System.Object)">
+            <summary>
+            Get the list of property name
+            </summary>
+            <param name="type">property value.</param>
+            <param name="value">the value.</param>
+            <returns>returns the list of properties name.</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEditRenderer.TriggerInternalMethod(System.Type,System.Object,System.String,System.Object[])">
+            <summary>
+            Trigger internal method
+            </summary>
+            <param name="type">the property type</param>
+            <param name="obj">the current object</param>
+            <param name="methodName">the method name</param>
+            <param name="args">the argument</param>
+            <returns>it returns the object</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEditRenderer.GetWindowsColor(Xamarin.Forms.Color)">
+            <summary>
+            Get windows color from forms color
+            </summary>
+            <param name="formsColor">the native color</param>
+            <returns>it returns the native color.</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEditRenderer.OnElementChanged(Xamarin.Forms.Platform.UWP.ElementChangedEventArgs{Syncfusion.XForms.MaskedEdit.SfMaskedEdit})">
+            <summary>
+            Raises the on element changed event.
+            </summary>
+            <param name="e">The changed element</param>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEditRenderer.SetAutomationId(System.String)">
+            <summary>
+            Sets the automation ID.
+            </summary>
+            <param name="id">Automation ID</param>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEditRenderer.OnCreateAutomationPeer">
+            <summary>
+            Provide automation peer for the control
+            </summary>
+            <returns>The masked edit automation peer.</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEditRenderer.Dispose(System.Boolean)">
+            <summary>
+            dispose the unmanaged resources 
+            </summary>
+            <param name="disposing">the dispose</param>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEditRenderer.OnElementPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Raises the element property changed event.
+            </summary>
+            <param name="sender">the Sender.</param>
+            <param name="e">the changed event.</param>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEditRenderer.NativeSfMaskedEdit_CursorPositionChanging(System.Object,Syncfusion.XForms.UWP.MaskedEdit.CursorPositionChangingEventArgs)">
+            <summary>
+            Raises the cursor position changing event.
+            </summary>
+            <param name="sender">The masked object.</param>
+            <param name="e">Cursor position changing event arguments.</param>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEditRenderer.NativeSfMaskedEdit_MaskInputRejected(System.Object,Syncfusion.XForms.MaskedEdit.MaskInputRejectedEventArgs)">
+            <summary>
+            Raises the on Mask Input Rejected event.
+            </summary>
+            <param name="sender"> the sender object</param>
+            <param name="e"> the changed element</param>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEditRenderer.NativeSfMaskedEdit_KeyUp(System.Object,Windows.UI.Xaml.Input.KeyRoutedEventArgs)">
+            <summary>
+            Raises the completed event.
+            </summary>
+            <param name="sender">the Sender.</param>
+            <param name="e">the changed event.</param>
+        </member>
+        <member name="T:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEditAutomationPeer">
+            <summary>
+            Masked Edit Automation Peer Class 
+            </summary>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEditAutomationPeer.#ctor(Windows.UI.Xaml.FrameworkElement)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEditAutomationPeer"/> class.
+            </summary>
+            <param name="owner">masked edit control</param>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEditAutomationPeer.GetAutomationControlTypeCore">
+            <summary>
+            Describe the control type
+            </summary>
+            <returns>The control type.</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEditAutomationPeer.GetClassNameCore">
+            <summary>
+            Describe the class name.
+            </summary>
+            <returns>The Class Name.</returns>
+        </member>
+        <member name="T:Syncfusion.XForms.UWP.MaskedEdit.MaskInputRejectedEventHandler">
+            <summary>
+            Mask rejection event handler
+            </summary>
+            <param name="sender">the sender</param>
+            <param name="e">the MaskInputRejectedEventArgs</param>
+        </member>
+        <member name="T:Syncfusion.XForms.UWP.MaskedEdit.ValueChangedEventHandler">
+            <summary>
+            Value changed event handler
+            </summary>
+            <param name="sender">the sender</param>
+            <param name="e">value changed event arguments</param>
+        </member>
+        <member name="T:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit">
+            <summary>
+            Represents the Masked Edit control.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.prevMask">
+            <summary>
+            Represents the previous mask.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.hasError">
+            <summary>
+            Indicates whether the control has succeeded validation or not.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.canDispose">
+            <summary>
+            Flag to control the dispose. 
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.clearButton">
+            <summary>
+            It contain clear button
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.mask">
+            <summary>
+            Represents the mask
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.promptChar">
+            <summary>
+            Represents the prompt char with default value.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.hidePromptOnLeave">
+            <summary>
+            Boolean to indicate prompt character on focus or not.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.value">
+            <summary>
+            Represents the mask value
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.maskType">
+            <summary>
+            Represents the mask type
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.validationMode">
+            <summary>
+            Represents the input validation mode
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.maskedText">
+            <summary>
+            Represents the Mask text 
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.maskWrapper">
+            <summary>
+            Represents the mask wrapper collection
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.displayText">
+            <summary>
+            Represents the display text that contains the literal and prompt characters
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.culture">
+            <summary>
+            Represents Culture
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.textForeground">
+            <summary>
+            Represents text color.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.borderColor">
+            <summary>
+            Represents border color
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.isFocussed">
+            <summary>
+            Indicates whether the control is focused or not.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.valueMaskFormat">
+            <summary>
+            Represents mask format for value
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.isRendered">
+            <summary>
+            Indicates whether the text is started render
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.maskHelper">
+            <summary>
+            Represents the mask helper
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.cutCopyMaskFormat">
+            <summary>
+            Indicate the cut copy mask format
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.skipLiterals">
+            <summary>
+            Indicate whether the reentering of literals need to be skipped.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.placeholderTextFontSize">
+            <summary>
+            Represents watermark font size
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.placeholderTextFontStyle">
+            <summary>
+            Represents watermark font style
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.placeholderTextFontFamily">
+            <summary>
+            Represents watermark font family
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.placeholderTextFontWeight">
+            <summary>
+            Represents watermark font weight
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.textFontSize">
+            <summary>
+            Represents text font size
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.textFontStyle">
+            <summary>
+            Represents text font style
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.textFontWeight">
+            <summary>
+            Represents text font weight
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.textFontFamily">
+            <summary>
+            Represents text font family
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.errorBorderColor">
+            <summary>
+            Represents Error Border Color
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.isWatermark">
+            <summary>
+            Represents watermark is rendered.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.selection">
+            <summary>
+            Represents the current selection
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.xFormsSfMaskedEdit">
+            <summary>
+            Represents forms masked edit.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.isMappingFinshed">
+            <summary>
+            Represents the mapping is finished or not
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.coreWindow">
+            <summary>
+            Represents the mapping is finished or not
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.mapSpecialCharacter">
+            <summary>
+            Represents the mapping is finished or not
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.passwordChar">
+            <summary>
+            Indicate the password character
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.selectAllOnFocus">
+            <summary>
+            This variable is used to specify whether select all the text or not on focus the control.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.hideOptionalPrompt">
+            <summary>
+            Indicates whether optional element to be hidden
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.prevText">
+            <summary>
+            Represents the previous text
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.enablePasswordDelay">
+            <summary>
+            Indicate customer set the delay when tying the password character
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.dispatcherTimer">
+            <summary>
+            The timer is used to apply delay when tying the password character
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.isTextRemoved">
+            <summary>
+            Represent whether the text is removed by clicking the back button or delete button
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.typedCharacter">
+            <summary>
+            Represent the currently typed character
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.isTextValidatedMask">
+            <summary>
+            Represent whether the typed text matches for the given mask  
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.textSetOnFocus">
+            <summary>
+            Represent whether the text is set when the control is in focus 
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.oldValue">
+            <summary>
+            Indicate the previous cursor index
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.charPosition">
+            <summary>
+            Represent the current  position of the typed char
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.cursorPosition">
+            <summary>
+            To store the current cursor index
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.lastCharIndex">
+            <summary>
+            To store the last character index
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.focusChange">
+            <summary>
+            Indicates whether the focus is changed or not.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.focusCount">
+            <summary>
+            To Store the focus count.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.passwordDelayDuration">
+            <summary>
+            Represent the duration of the password char delay
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.isClearButtonClicked">
+            <summary>
+            Indicates the clear button is clicked or not.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.isSelectionPerformed">
+            <summary>
+            Gets or sets a value indicating whether the selection performed on focus.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.clearButtonVisibility">
+            <summary>
+            Represent clear button visibility.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit"/> class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.#ctor(Syncfusion.XForms.MaskedEdit.SfMaskedEdit)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit" /> class
+            </summary>
+            <param name="formsSfMaskedEdit">Event argument</param>
+        </member>
+        <member name="E:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.MaskInputRejected">
+            <summary>
+            Event handles when mask rejected.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.CursorPositionChanging">
+            <summary>
+            Raised the event during the change of cursor position.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.ValueChanged">
+            <summary>
+            Event handles when value changed.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.PasswordChar">
+            <summary>
+            Gets or sets a value to be displayed in substitute of user input.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.SkipLiterals">
+            <summary>
+            Gets or sets a value indicating whether the user is allowed to reenter literal values.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.CutCopyMaskFormat">
+            <summary>
+            Gets or sets a value that determines whether literals and prompt characters are copied to the clipboard.
+            </summary>
+            <value>The default value is MaskFormat.IncludeLiterals.</value>
+        </member>
+        <member name="P:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.CursorPosition">
+            <summary>
+            Gets or sets the position of the cursor in masked edit.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.ErrorBorderColor">
+            <summary>
+            Gets or sets the error border color
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.PlaceholderTextFontSize">
+            <summary>
+            Gets or sets the watermark size
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.PlaceholderTextFontStyle">
+            <summary>
+            Gets or sets watermark font style
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.PlaceholderTextFontWeight">
+            <summary>
+            Gets or sets watermark font weight
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.PlaceholderTextFontFamily">
+            <summary>
+            Gets or sets watermark font family
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.HasError">
+            <summary>
+            Gets a value indicating whether the mask has error
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.Mask">
+            <summary>
+            Gets or sets the Mask
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.ValueMaskFormat">
+            <summary>
+            Gets or sets the mask format for value
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.MaskType">
+            <summary>
+            Gets or sets the mask type
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.Culture">
+            <summary>
+            Gets or sets the culture
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.PromptChar">
+            <summary>
+            Gets or sets the Prompt Character
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.HidePromptOnLeave">
+            <summary>
+            Gets or sets a value indicating whether the prompt characters in the input mask
+            are hidden when the masked text box loses focus.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.ValidationMode">
+            <summary>
+            Gets or sets the ValidationMode.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.Value">
+            <summary>
+            Gets or sets the Value.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.EnablePasswordDelay">
+            <summary>
+            Gets or sets a value indicating whether the password character should be displayed with delay or not.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.PasswordDelayDuration">
+            <summary>
+            Gets or sets the duration of the delay when tying the password character.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.IsWatermark">
+            <summary>
+            Gets or sets a value indicating whether the watermark is rendered or not
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.CharPosition">
+            <summary>
+            Gets or sets the current character position
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.MaskedText">
+            <summary>
+            Gets or sets the masked text
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.MaskWrapper">
+            <summary>
+            Gets or sets the mask properties
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.DisplayText">
+            <summary>
+            Gets or sets the display text
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.IsRendered">
+            <summary>
+            Gets or sets a value indicating whether the character is rendered.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.IsFocused">
+            <summary>
+            Gets or sets a value indicating whether the control is focused or not.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.PreviousText">
+            <summary>
+            Gets or sets a value indicating the previous text
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.HideOptionalPrompt">
+            <summary>
+            Gets or sets a value indicating whether to hide prompt element
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.SelectAllOnFocus">
+            <summary>
+            Gets or sets a value indicating whether all the text to be selected or not on focusing the  <see cref="T:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit"/> control.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.ClearButtonVisibility">
+            <summary>
+            Gets or sets the visibility for clear button.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.IsValueUpdate">
+            <summary>
+            Gets or sets a value indicating whether the value is updated at load time.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.IsMaskWrapper">
+            <summary>
+            Gets or sets a value indicating whether the mask wrapper is updated at load time.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.IsValueSetBeforeMask">
+            <summary>
+            Gets or sets a value indicating whether the mask property is updated or not.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.OriginalPasswordValue">
+            <summary>
+            Gets or sets a value to store the original value of the password without mask.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.Dispose">
+            <summary>
+            Dispose the resource.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.UpdateValue(System.Object,System.Boolean)">
+            <summary>
+            Method to update value when changed
+            </summary>
+            <param name="value">the value</param>
+            <param name="isNeedToUpdateText">whether to update text for masked edit</param>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.SetFontStyle(Windows.UI.Text.FontStyle,Windows.UI.Text.FontWeight)">
+            <summary>
+            Set font style.
+            </summary>
+            <param name="style">The font style</param>
+            <param name="weight">The font weight</param>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.SetFontSize(System.Double)">
+            <summary>
+            Set font size.
+            </summary>
+            <param name="size">The font size</param>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.SetFontFamily(Windows.UI.Xaml.Media.FontFamily)">
+            <summary>
+            Set font family.
+            </summary>
+            <param name="family">The font style</param>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.SetForeground(Windows.UI.Xaml.Media.Brush)">
+            <summary>
+            Set text color.
+            </summary>
+            <param name="color">The font color</param>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.OnCursorPositionChanging(Syncfusion.XForms.UWP.MaskedEdit.CursorPositionChangingEventArgs)">
+            <summary>
+            Method called to raise the cursor position changing event.
+            </summary>
+            <param name="args">cursor position changing arguments</param>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.SetSelection(System.Int32)">
+            <summary>
+            Set cursor position
+            </summary>
+            <param name="index">The typed position</param>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.UpdateCursorPosition(System.Int32)">
+            <summary>
+            Method called when update the cursor position
+            </summary>
+            <param name="index">index of the current cursor position.</param>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.OnLostFocus(Windows.UI.Xaml.RoutedEventArgs)">
+            <summary>
+            Occurs when focus is lost.
+            </summary>
+            <param name="e">Routed event args</param>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.OnGotFocus(Windows.UI.Xaml.RoutedEventArgs)">
+            <summary>
+            Handles control on focused.
+            </summary>
+            <param name="e">event argument </param>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.OnApplyTemplate">
+            <summary>
+            Invoked whenever application rebuilding layout.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.OnTapped(Windows.UI.Xaml.Input.TappedRoutedEventArgs)">
+            <summary>
+            Handles the tapped event.
+            </summary>
+            <param name="e">tapped event arguments</param>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.OnKeyUp(Windows.UI.Xaml.Input.KeyRoutedEventArgs)">
+            <summary>
+            Handles the key released event
+            </summary>
+            <param name="e">key released event arguments</param>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.OnKeyDown(Windows.UI.Xaml.Input.KeyRoutedEventArgs)">
+            <summary>
+            Handles the key down event.
+            </summary>
+            <param name="e">Event argument</param>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.IsKeyOn(Windows.System.VirtualKey)">
+            <summary>
+            Handles control loaded.
+            </summary>
+            <param name="key">event argument </param>
+            <returns> true or false</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.InsertString(System.String,System.String,System.Int32)">
+            <summary>
+            Insert a string into another string.
+            </summary>
+            <param name="originalString">The original string.</param>
+            <param name="stringToBeInserted">String to be inserted.</param>
+            <param name="index">Index to insert string</param>
+            <returns>Inserted string</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.CutTextFromTextbox">
+            <summary>
+            Cut the text from the masked edit.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.CopyTextFromTextBox">
+            <summary>
+            Copy the text from the masked edit.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.PasteTextToTextBox">
+            <summary>
+             Paste the text to the masked edit.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.OnLoading">
+            <summary>
+            Initializes the events and members
+            </summary>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.SfMaskedEdit_TextChanged(System.Object,Windows.UI.Xaml.Controls.TextChangedEventArgs)">
+            <summary>
+            Handles the key down event.
+            </summary>
+            <param name="sender">sender argument</param>
+            <param name="e">Event argument</param>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.Delete(System.Int32,System.Int32@)">
+            <summary>
+            Handles when delete the text.
+            </summary>
+            <param name="caretIndex">character current index</param>
+            <param name="caretEnd">character end index</param>
+            <returns>represents the index after performed the delete operation</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.GetCharFromKey(System.Int32,System.Boolean)">
+            <summary>
+            Handles control loaded.
+            </summary>
+            <param name="key"> event key </param>
+            <param name="isshiftkey">shift key </param>
+            <returns> Typed character</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.SfMaskedEdit_CuttingToClipboard(Windows.UI.Xaml.Controls.TextBox,Windows.UI.Xaml.Controls.TextControlCuttingToClipboardEventArgs)">
+            <summary>
+            Event occurs before cut text is moved to the clipboard.
+            </summary>
+            <param name="sender">The sender the contains a masked edit</param>
+            <param name="args">The <see cref="T:Windows.UI.Xaml.Controls.TextControlCopyingToClipboardEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.SfMaskedEdit_CopyingToClipboard(Windows.UI.Xaml.Controls.TextBox,Windows.UI.Xaml.Controls.TextControlCopyingToClipboardEventArgs)">
+            <summary>
+            Events occurs before copied text is moved to the clipboard.
+            </summary>
+            <param name="sender">The sender the contains a masked edit</param>
+            <param name="args">The <see cref="T:Windows.UI.Xaml.Controls.TextControlCopyingToClipboardEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.SfMaskedEdit_Paste(System.Object,Windows.UI.Xaml.Controls.TextControlPasteEventArgs)">
+            <summary>
+            Event occurs when text is pasted to the masked edit.
+            </summary>
+            <param name="sender">The sender the contains a masked edit</param>
+            <param name="e">The <see cref="T:Windows.UI.Xaml.Controls.TextControlCopyingToClipboardEventArgs"/>that contains the event data.</param>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.SfMaskedEdit_Loaded(System.Object,Windows.UI.Xaml.RoutedEventArgs)">
+            <summary>
+            Handles control loaded.
+            </summary>
+            <param name="sender">routed argument</param>
+            <param name="e">sender argument </param>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.OnMaskInputRejected(System.Int32,System.Char)">
+            <summary>
+            Handles mask input is rejected.
+            </summary>
+            <param name="position">The typed position</param>
+            <param name="typedChar">The typed character</param>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.OnValueChanged">
+            <summary>
+            Handles value property changed.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.DispatcherTimer_Tick(System.Object,System.Object)">
+            <summary>
+            Called after each delay
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The instance containing the event data.</param>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.SfMaskedEdit.AddorRemoveClearButtonToView">
+            <summary>
+            Add or remove clear button from the view based on the clear button visibility.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.XForms.UWP.MaskedEdit.CursorPositionChangingEventArgs">
+            <summary>
+            To get the cursor position changing arguments. 
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.UWP.MaskedEdit.CursorPositionChangingEventArgs.Cancel">
+            <summary>
+            Gets or sets a value indicating whether to restrict the cursor movement.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.UWP.MaskedEdit.CursorPositionChangingEventArgs.NewValue">
+            <summary>
+            Gets the current cursor index.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.UWP.MaskedEdit.CursorPositionChangingEventArgs.OldValue">
+            <summary>
+            Gets the previous cursor index.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.UWP.MaskedEdit.CursorPositionChangingEventArgs.CurrentValue">
+            <summary>
+            Gets or sets a value indicates whether the current cursor index.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.UWP.MaskedEdit.CursorPositionChangingEventArgs.LastValue">
+            <summary>
+            Gets or sets a value indicates whether the previous cursor index.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.XForms.UWP.MaskedEdit.SpecialCharactersCollection">
+            <summary>
+             Specifies the special characters collection.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SpecialCharactersCollection.shiftspecialcharacterList">
+            <summary>
+             Specifies the Keyboard Type for MaskedEdit.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SpecialCharactersCollection.specialcharacterList">
+            <summary>
+             Specifies the Keyboard Type for MaskedEdit.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SpecialCharactersCollection.numberpadcharacterList">
+            <summary>
+             Specifies the Keyboard Type for MaskedEdit.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SpecialCharactersCollection.altctrlspecialcharacterList">
+            <summary>
+             Specifies the Keyboard Type for MaskedEdit.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.UWP.MaskedEdit.SpecialCharactersCollection.isAZERTY">
+            <summary>
+             Specifies the Keyboard Type for MaskedEdit.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.XForms.UWP.MaskedEdit.SpecialCharactersCollection.#ctor(System.Boolean)">
+            <summary>
+             Initializes a new instance of the <see cref="T:Syncfusion.XForms.UWP.MaskedEdit.SpecialCharactersCollection"/> class.
+            </summary>
+            <param name="isAZERTY">the keyboard type.</param>
+        </member>
+        <member name="P:Syncfusion.XForms.UWP.MaskedEdit.SpecialCharactersCollection.ShiftspecialcharacterList">
+            <summary>
+             Gets or sets the shift special character list.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.UWP.MaskedEdit.SpecialCharactersCollection.SpecialcharacterList">
+            <summary>
+             Gets or sets the special character list.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.UWP.MaskedEdit.SpecialCharactersCollection.NumberpadcharacterList">
+            <summary>
+             Gets or sets the shift Number pad character List.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.UWP.MaskedEdit.SpecialCharactersCollection.AltctrlspecialcharacterList">
+            <summary>
+             Gets or sets the special character List.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.UWP.MaskedEdit.SpecialCharactersCollection.IsAZERTY">
+            <summary>
+             Gets or sets a value indicating whether the is keyboard.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.XForms.MaskedEdit.MaskProperties">
+            <summary>
+            Class represents mask properties.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.MaskProperties.isLiteral">
+            <summary>
+            Field represents whether it is literal.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.MaskProperties.isDigit">
+            <summary>
+            Field represents whether it is digit.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.MaskProperties.isAlphaNumeric">
+            <summary>
+            Field represents whether it is alpha numeric.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.MaskProperties.isAlphabet">
+            <summary>
+            Field represents whether it is Alphabet.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.MaskProperties.isDigitWithSign">
+            <summary>
+            Field represents whether it is Digit with sign.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.MaskProperties.isPromptChar">
+            <summary>
+            Field represents whether it is Prompt character.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.MaskProperties.isUpperCase">
+            <summary>
+            Field represents whether it is upper case.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.MaskProperties.isOptional">
+            <summary>
+            Field represents whether the mask is optional.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.MaskProperties.maximumrepetition">
+            <summary>
+            Field represents the maximum repetition.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.MaskProperties.minimumrepetition">
+            <summary>
+            Field represents the minimum repetition.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.MaskProperties.regularExpression">
+            <summary>
+            Field represents the regular expression.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.MaskProperties.startIndex">
+            <summary>
+            Field represents the start index of the mask data.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.MaskProperties.endIndex">
+            <summary>
+            Field represents the end index of the mask data.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.MaskProperties.maskData">
+            <summary>
+            Field represents the mask data.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.MaskProperties.isEscapeChar">
+            <summary>
+            Field represents whether the data is escape sequence.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.MaskProperties.isGrouping">
+            <summary>
+            Field represents whether the element is grouping.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.MaskProperties.groupCollection">
+            <summary>
+            Filed that represents the group collection.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.MaskProperties.currentGroupMaskIndex">
+            <summary>
+            Field that represents current mask index.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.MaskProperties.isAlternation">
+            <summary>
+            Field that represents whether the mask has alternation.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.MaskProperties.CurrentGroupMaskIndex">
+            <summary>
+            Gets or sets a value indicating the current mask index for grouping.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.MaskProperties.IsEscapeChar">
+            <summary>
+            Gets or sets a value indicating whether the mask is escape sequence.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.MaskProperties.StartIndex">
+            <summary>
+            Gets or sets a value indicates the start index of the mask data in MaskText.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.MaskProperties.EndIndex">
+            <summary>
+            Gets or sets a value indicates the end index of the mask data in MaskText.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.MaskProperties.MaskData">
+            <summary>
+            Gets or sets a value indicates the mask data of the current mask property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.MaskProperties.IsLiteral">
+            <summary>
+            Gets or sets whether the mask is literal.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.MaskProperties.IsPromptChar">
+            <summary>
+            Gets or sets whether the mask is prompt character.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.MaskProperties.IsUpperCase">
+            <summary>
+            Gets or sets whether the mask is upper case.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.MaskProperties.IsOptional">
+            <summary>
+            Gets or sets a value indicating whether mask is Optional.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.MaskProperties.RegularExpression">
+            <summary>
+            Gets or sets the regular expression data.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.MaskProperties.MinimumRepetition">
+            <summary>
+            Gets or sets the minimum repetition count.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.MaskProperties.MaximumRepetition">
+            <summary>
+            Gets or sets the maximum repetition count.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.MaskProperties.IsDigit">
+            <summary>
+            Gets or sets a value indicating whether the mask is Digit.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.MaskProperties.IsAlphabet">
+            <summary>
+            Gets or sets a value indicating whether the mask is Alphabet.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.MaskProperties.IsAlphaNumeric">
+            <summary>
+            Gets or sets a value indicating whether the mask is Alpha Numeric.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.MaskProperties.IsDigitWithSign">
+            <summary>
+            Gets or sets a value indicating whether  the mask is Digit with sign.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.MaskProperties.IsGrouping">
+            <summary>
+            Gets or sets a value indicating whether the element is grouping.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.MaskProperties.GroupCollection">
+            <summary>
+            Gets or sets a value indicating the group collection.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.MaskProperties.IsAlternation">
+            <summary>
+            Gets or sets a value indicating whether the group has alternation.
+            </summary>
+        </member>
+    </members>
+</doc>
