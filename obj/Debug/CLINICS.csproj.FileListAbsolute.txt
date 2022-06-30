@@ -1,0 +1,263 @@
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\windows\MainWindow.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\pages\AboutUs.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\pages\ChooseService.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\pages\Profile.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\pages\LoginPage.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\pages\RegistrationPage.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\App.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\CLINICS_Content.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\CLINICS_MarkupCompile.cache
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\CLINICS_MarkupCompile.lref
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\App.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\windows\MainWindow.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\pages\AboutUs.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\pages\ChooseService.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\pages\Profile.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\pages\LoginPage.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\pages\RegistrationPage.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\styles\ButtonsTemplates.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\CLINICS.g.resources
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\CLINICS.pdb
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\bin\Debug\CLINICS.exe.config
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\bin\Debug\CLINICS.exe
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\bin\Debug\CLINICS.pdb
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\bin\Debug\EntityFramework.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\bin\Debug\EntityFramework.SqlServer.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\bin\Debug\EntityFramework.xml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\bin\Debug\EntityFramework.SqlServer.xml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\CLINICS.Properties.Resources.resources
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\CLINICS.csproj.GenerateResource.cache
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\CLINICS.csproj.CoreCompileInputs.cache
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\CLINICS.csproj.CopyComplete
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\CLINICS.exe
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\bin\Debug\Microsoft.Toolkit.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\bin\Debug\Microsoft.Toolkit.Uwp.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\bin\Debug\Microsoft.Xaml.Interactions.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\bin\Debug\Microsoft.Xaml.Interactivity.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\bin\Debug\System.Buffers.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\bin\Debug\System.Collections.Immutable.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\bin\Debug\System.Numerics.Vectors.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\bin\Debug\Microsoft.Toolkit.pdb
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\bin\Debug\Microsoft.Toolkit.xml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\bin\Debug\Microsoft.Toolkit.Uwp.pdb
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\bin\Debug\Microsoft.Toolkit.Uwp.xml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\bin\Debug\System.Buffers.xml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\bin\Debug\System.Collections.Immutable.xml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\bin\Debug\System.Numerics.Vectors.xml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\pages\ChooseDoctorListView.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\pages\ChooseDoctorListView.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\bin\Debug\Xceed.Wpf.AvalonDock.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\bin\Debug\Xceed.Wpf.Toolkit.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\bin\Debug\cs-CZ\Xceed.Wpf.AvalonDock.resources.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\bin\Debug\ja-JP\Xceed.Wpf.AvalonDock.resources.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\pages\DoctorsButtonUserControl.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\pages\DoctorsButtonUserControl.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\pages\ChooseDateTime.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\pages\DoctorRating.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\pages\ChooseDateTime.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\pages\DoctorRating.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\pages\History.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\pages\RegistrationsHistoryUserControl.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\pages\History.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\pages\RegistrationsHistoryUserControl.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\pages\DoctorHistory.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\pages\DoctorHistoryUserControl.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\pages\DoctorHistory.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\pages\DoctorHistoryUserControl.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\windows\AdminWindow.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\windows\AdminWindow.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\adminpages\DoctorTable.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\adminpages\DoctorTable.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\adminpages\ClientTable.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\adminpages\ClientTable.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\bin\Debug\Syncfusion.Core.XForms.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\bin\Debug\Syncfusion.Licensing.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\bin\Debug\Syncfusion.SfMaskedEdit.XForms.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\bin\Debug\Xamarin.Forms.Core.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\bin\Debug\Xamarin.Forms.Platform.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\bin\Debug\Xamarin.Forms.Xaml.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\bin\Debug\Syncfusion.Core.XForms.xml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\bin\Debug\Syncfusion.SfMaskedEdit.XForms.xml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\bin\Debug\Xamarin.Forms.Core.pdb
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\bin\Debug\Xamarin.Forms.Core.xml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\bin\Debug\Xamarin.Forms.Xaml.pdb
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\bin\Debug\Xamarin.Forms.Xaml.xml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\adminpages\ServiceTable.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\adminpages\ServiceTable.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\adminpages\DoctorServiceTable.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\adminpages\DoctorServiceTable.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\adminpages\RegistrationTable.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\adminpages\RegistrationTable.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\adminpages\DoctorRatingTable.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\adminpages\RegistrationDateTable.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\adminpages\RegistrationTimeTable.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\adminpages\DoctorRatingTable.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\adminpages\RegistrationDateTable.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\adminpages\RegistrationTimeTable.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\pages\ServiceButtonUserControl.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\pages\ServiceButtonUserControl.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\windows\LeaveCommentWindow.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\windows\LeaveCommentWindow.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\pages\TimeButtonUserControl.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\pages\TimeButtonUserControl.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\adminpages\ClientTable.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\adminpages\DoctorRatingTable.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\adminpages\DoctorServiceTable.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\adminpages\DoctorTable.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\adminpages\RegistrationDateTable.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\adminpages\RegistrationTable.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\adminpages\RegistrationTimeTable.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\adminpages\ServiceTable.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\pages\ChooseDateTime.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\pages\ChooseDoctorListView.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\pages\Doctor.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\pages\DoctorHistory.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\pages\DoctorHistoryUserControl.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\pages\DoctorRating.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\pages\DoctorsButtonUserControl.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\pages\History.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\pages\RegistrationsHistoryUserControl.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\pages\ServiceButtonUserControl.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\pages\TimeButtonUserControl.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\windows\AdminWindow.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\windows\ConfirmBooking.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\windows\DoctorWindow.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\windows\LeaveCommentWindow.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\windows\MainWindow.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\pages\AboutUs.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\pages\ChooseService.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\pages\Profile.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\pages\LoginPage.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\pages\RegistrationPage.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\windows\WindowWithMenu.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\App.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\CLINICS_Content.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\CLINICS_MarkupCompile.cache
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\CLINICS_MarkupCompile.lref
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\App.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\adminpages\ClientTable.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\adminpages\DoctorRatingTable.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\adminpages\DoctorServiceTable.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\adminpages\DoctorTable.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\adminpages\RegistrationDateTable.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\adminpages\RegistrationTable.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\adminpages\RegistrationTimeTable.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\adminpages\ServiceTable.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\pages\ChooseDateTime.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\pages\ChooseDoctorListView.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\pages\Doctor.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\pages\DoctorHistory.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\pages\DoctorHistoryUserControl.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\pages\DoctorRating.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\pages\DoctorsButtonUserControl.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\pages\History.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\pages\RegistrationsHistoryUserControl.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\pages\ServiceButtonUserControl.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\pages\TimeButtonUserControl.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\windows\AdminWindow.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\windows\ConfirmBooking.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\windows\DoctorWindow.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\windows\LeaveCommentWindow.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\windows\MainWindow.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\pages\AboutUs.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\pages\ChooseService.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\pages\Profile.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\pages\LoginPage.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\pages\RegistrationPage.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\styles\ButtonsTemplates.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\windows\WindowWithMenu.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\CLINICS.g.resources
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\CLINICS.pdb
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\pages\DoctorRatingUserControl.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\bin\Debug\CLINICS.exe.config
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\bin\Debug\CLINICS.exe
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\bin\Debug\CLINICS.pdb
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\bin\Debug\EntityFramework.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\bin\Debug\EntityFramework.SqlServer.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\bin\Debug\Microsoft.Toolkit.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\bin\Debug\Microsoft.Toolkit.Uwp.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\bin\Debug\Microsoft.Xaml.Interactions.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\bin\Debug\Microsoft.Xaml.Interactivity.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\bin\Debug\Syncfusion.Core.XForms.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\bin\Debug\Syncfusion.Licensing.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\bin\Debug\Syncfusion.SfMaskedEdit.XForms.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\bin\Debug\System.Buffers.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\bin\Debug\System.Collections.Immutable.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\bin\Debug\System.Numerics.Vectors.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\bin\Debug\Xamarin.Forms.Core.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\bin\Debug\Xamarin.Forms.Platform.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\bin\Debug\Xamarin.Forms.Xaml.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\bin\Debug\Xceed.Wpf.AvalonDock.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\bin\Debug\Xceed.Wpf.Toolkit.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\bin\Debug\EntityFramework.xml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\bin\Debug\EntityFramework.SqlServer.xml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\bin\Debug\Microsoft.Toolkit.pdb
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\bin\Debug\Microsoft.Toolkit.xml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\bin\Debug\Microsoft.Toolkit.Uwp.pdb
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\bin\Debug\Microsoft.Toolkit.Uwp.xml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\bin\Debug\Syncfusion.Core.XForms.xml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\bin\Debug\Syncfusion.SfMaskedEdit.XForms.xml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\bin\Debug\System.Buffers.xml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\bin\Debug\System.Collections.Immutable.xml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\bin\Debug\System.Numerics.Vectors.xml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\bin\Debug\Xamarin.Forms.Core.pdb
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\bin\Debug\Xamarin.Forms.Core.xml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\bin\Debug\Xamarin.Forms.Xaml.pdb
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\bin\Debug\Xamarin.Forms.Xaml.xml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\bin\Debug\cs-CZ\Xceed.Wpf.AvalonDock.resources.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\bin\Debug\ja-JP\Xceed.Wpf.AvalonDock.resources.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\pages\DoctorRatingUserControl.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\CLINICS.Properties.Resources.resources
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\CLINICS.csproj.GenerateResource.cache
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\CLINICS.csproj.CoreCompileInputs.cache
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\CLINICS.csproj.CopyComplete
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\CLINICS.exe
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS old but gold\obj\Debug\CLINICS.csprojAssemblyReference.cache
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\pages\DoctorRatingUserControl.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\pages\DoctorRatingUserControl.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\windows\EndServiceByDoctor.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\windows\EndServiceByDoctor.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\pages\CommentInputUserControl.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\pages\CommentInputUserControl.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\pages\DoctorInfoUserControl.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\windows\DoctorInfoWindow.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\pages\DoctorInfoUserControl.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\windows\DoctorInfoWindow.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\windows\ConfirmBookingWindow.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\windows\ConfirmBookingWindow.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\adminpages\MainAdminPage.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\adminpages\MainAdminPage.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\windows\CancelBookingWindow.g.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\windows\CancelBookingWindow.baml
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\CLINICS.csprojAssemblyReference.cache

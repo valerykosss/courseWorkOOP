@@ -1,0 +1,20 @@
+﻿CLINICS
+
+
+winexe
+C#
+.cs
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\obj\Debug\
+CLINICS
+none
+false
+DEBUG;TRACE
+E:\2 курс БГТУ\!КУРСАЧ ООП\CLINICS\App.xaml
+35-180997782
+2-890474919
+51492998906
+1421547740694
+adminpages\ClientTable.xaml;adminpages\DoctorRatingTable.xaml;adminpages\DoctorServiceTable.xaml;adminpages\DoctorTable.xaml;adminpages\MainAdminPage.xaml;adminpages\RegistrationDateTable.xaml;adminpages\RegistrationTable.xaml;adminpages\RegistrationTimeTable.xaml;adminpages\ServiceTable.xaml;pages\ChooseDateTime.xaml;pages\ChooseDoctorListView.xaml;pages\CommentInputUserControl.xaml;pages\DoctorHistory.xaml;pages\DoctorHistoryUserControl.xaml;pages\DoctorInfoUserControl.xaml;pages\DoctorRating.xaml;pages\DoctorRatingUserControl.xaml;pages\DoctorsButtonUserControl.xaml;pages\History.xaml;pages\RegistrationsHistoryUserControl.xaml;pages\ServiceButtonUserControl.xaml;pages\TimeButtonUserControl.xaml;windows\AdminWindow.xaml;windows\CancelBookingWindow.xaml;windows\ConfirmBookingWindow.xaml;windows\DoctorInfoWindow.xaml;windows\EndServiceByDoctor.xaml;windows\LeaveCommentWindow.xaml;windows\MainWindow.xaml;pages\AboutUs.xaml;pages\ChooseService.xaml;pages\Profile.xaml;pages\LoginPage.xaml;pages\RegistrationPage.xaml;styles\ButtonsTemplates.xaml;
+
+False
+
