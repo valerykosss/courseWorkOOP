@@ -1,0 +1,1152 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Syncfusion.SfMaskedEdit.XForms</name>
+    </assembly>
+    <members>
+        <member name="T:Syncfusion.XForms.MaskedEdit.MaskType">
+            <summary>
+            Contains values for the MaskType enumeration that has different set of mask characters combined to form a mask expression.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.MaskType.Text">
+            <summary>
+            Represents the basic regular expression mask elements.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.MaskType.RegEx">
+            <summary>
+            Represents the complex regular expression mask elements.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.XForms.MaskedEdit.InputValidationMode">
+            <summary>
+            Contains values for the InputValidationMode enumeration that determines input validation in the <see cref="T:Syncfusion.XForms.MaskedEdit.SfMaskedEdit"/> control.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.InputValidationMode.LostFocus">
+            <summary>
+            Perform validation on lost focus.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.InputValidationMode.KeyPress">
+            <summary>
+            Perform validation on every key press.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.XForms.MaskedEdit.MaskFormat">
+            <summary>
+            Contains values for the MaskFormat enumeration that allows the Value property to hold the characters without prompt and literals by setting the ValueMaskFormat.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.MaskFormat.ExcludePromptAndLiterals">
+            <summary>
+            Excludes the prompt character and literals in value.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.MaskFormat.IncludeLiterals">
+            <summary>
+            Includes only the literals in value.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.MaskFormat.IncludePrompt">
+            <summary>
+            Includes only the prompt character in value.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.MaskFormat.IncludePromptAndLiterals">
+            <summary>
+            Includes the prompt character and literals in value.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.XForms.MaskedEdit.MaskedTextResultHint">
+            <summary>
+            Contains values for the MaskFormat enumeration that describes why the input character was rejected.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.MaskedTextResultHint.AlphanumericCharacterExpected">
+            <summary>
+            Operation failed. An input character was encountered that was not alphanumeric.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.MaskedTextResultHint.DigitExpected">
+            <summary>
+            Operation failed. An input character was encountered that was not a digit.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.MaskedTextResultHint.LetterExpected">
+            <summary>
+            Operation failed. An input character was encountered that was not a letter.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.MaskedTextResultHint.SignedDigitExpected">
+            <summary>
+            Operation failed. An input character was encountered that was not a signed digit.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.MaskedTextResultHint.UnavailableEditPosition">
+            <summary>
+            Operation failed. There were not enough edit positions available to fulfill the request.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.XForms.MaskedEdit.MaskInputRejectedEventArgs">
+            <summary>
+             Specifies the mask input Rejected event arguments.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.XForms.MaskedEdit.MaskInputRejectedEventArgs.#ctor(System.Int32,Syncfusion.XForms.MaskedEdit.MaskedTextResultHint)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.XForms.MaskedEdit.MaskInputRejectedEventArgs"/> class.
+            </summary>
+            <param name="position">The position.</param>
+            <param name="rejectionHint">The rejection hint.</param>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.MaskInputRejectedEventArgs.Position">
+            <summary>
+            Gets a value of Position in the <see cref="T:Syncfusion.XForms.MaskedEdit.SfMaskedEdit"/> control. This property can be used to get the position.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.MaskInputRejectedEventArgs.RejectionHint">
+            <summary>
+            Gets a value of the RejectionHint in the <see cref="T:Syncfusion.XForms.MaskedEdit.SfMaskedEdit"/> control.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.XForms.MaskedEdit.MaskProperties">
+            <summary>
+            Class represents mask properties.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.MaskProperties.isLiteral">
+            <summary>
+            Field represents whether it is literal.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.MaskProperties.isDigit">
+            <summary>
+            Field represents whether it is digit.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.MaskProperties.isAlphaNumeric">
+            <summary>
+            Field represents whether it is alpha numeric.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.MaskProperties.isAlphabet">
+            <summary>
+            Field represents whether it is Alphabet.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.MaskProperties.isDigitWithSign">
+            <summary>
+            Field represents whether it is Digit with sign.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.MaskProperties.isPromptChar">
+            <summary>
+            Field represents whether it is Prompt character.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.MaskProperties.isUpperCase">
+            <summary>
+            Field represents whether it is upper case.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.MaskProperties.isOptional">
+            <summary>
+            Field represents whether the mask is optional.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.MaskProperties.maximumrepetition">
+            <summary>
+            Field represents the maximum repetition.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.MaskProperties.minimumrepetition">
+            <summary>
+            Field represents the minimum repetition.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.MaskProperties.regularExpression">
+            <summary>
+            Field represents the regular expression.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.MaskProperties.startIndex">
+            <summary>
+            Field represents the start index of the mask data.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.MaskProperties.endIndex">
+            <summary>
+            Field represents the end index of the mask data.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.MaskProperties.maskData">
+            <summary>
+            Field represents the mask data.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.MaskProperties.isEscapeChar">
+            <summary>
+            Field represents whether the data is escape sequence.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.MaskProperties.isGrouping">
+            <summary>
+            Field represents whether the element is grouping.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.MaskProperties.groupCollection">
+            <summary>
+            Filed that represents the group collection.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.MaskProperties.currentGroupMaskIndex">
+            <summary>
+            Field that represents current mask index.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.MaskProperties.isAlternation">
+            <summary>
+            Field that represents whether the mask has alternation.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.MaskProperties.CurrentGroupMaskIndex">
+            <summary>
+            Gets or sets a value indicating the current mask index for grouping.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.MaskProperties.IsEscapeChar">
+            <summary>
+            Gets or sets a value indicating whether the mask is escape sequence.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.MaskProperties.StartIndex">
+            <summary>
+            Gets or sets a value indicates the start index of the mask data in MaskText.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.MaskProperties.EndIndex">
+            <summary>
+            Gets or sets a value indicates the end index of the mask data in MaskText.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.MaskProperties.MaskData">
+            <summary>
+            Gets or sets a value indicates the mask data of the current mask property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.MaskProperties.IsLiteral">
+            <summary>
+            Gets or sets whether the mask is literal.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.MaskProperties.IsPromptChar">
+            <summary>
+            Gets or sets whether the mask is prompt character.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.MaskProperties.IsUpperCase">
+            <summary>
+            Gets or sets whether the mask is upper case.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.MaskProperties.IsOptional">
+            <summary>
+            Gets or sets a value indicating whether mask is Optional.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.MaskProperties.RegularExpression">
+            <summary>
+            Gets or sets the regular expression data.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.MaskProperties.MinimumRepetition">
+            <summary>
+            Gets or sets the minimum repetition count.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.MaskProperties.MaximumRepetition">
+            <summary>
+            Gets or sets the maximum repetition count.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.MaskProperties.IsDigit">
+            <summary>
+            Gets or sets a value indicating whether the mask is Digit.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.MaskProperties.IsAlphabet">
+            <summary>
+            Gets or sets a value indicating whether the mask is Alphabet.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.MaskProperties.IsAlphaNumeric">
+            <summary>
+            Gets or sets a value indicating whether the mask is Alpha Numeric.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.MaskProperties.IsDigitWithSign">
+            <summary>
+            Gets or sets a value indicating whether  the mask is Digit with sign.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.MaskProperties.IsGrouping">
+            <summary>
+            Gets or sets a value indicating whether the element is grouping.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.MaskProperties.GroupCollection">
+            <summary>
+            Gets or sets a value indicating the group collection.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.MaskProperties.IsAlternation">
+            <summary>
+            Gets or sets a value indicating whether the group has alternation.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.XForms.MaskedEdit.ValueChangedEventHandler">
+            <summary>
+            It handles the ValueChanged event of the <see cref="T:Syncfusion.XForms.MaskedEdit.SfMaskedEdit"/> control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="eventArgs">The data for the event.</param>
+        </member>
+        <member name="T:Syncfusion.XForms.MaskedEdit.MaskInputRejectedEventHandler">
+            <summary>
+            It handles the MaskInputRejected event of the <see cref="T:Syncfusion.XForms.MaskedEdit.SfMaskedEdit"/> control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="eventArgs">The data for the event.</param>
+        </member>
+        <member name="T:Syncfusion.XForms.MaskedEdit.SfMaskedEdit">
+            <summary>
+            Represents the masked edit control, which is used to create a template for providing information such as telephone numbers, IP addresses, and so on.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.SkipLiteralsProperty">
+            <summary>
+            Identifies the <see cref="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.SkipLiterals"/> property. It indicates whether users are allowed to reenter literal values.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.CursorPositionProperty">
+            <summary>
+            Identifies the <see cref="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.CursorPosition"/> property. It is a bindable property of cusor position. 
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.BorderColorProperty">
+            <summary>
+            Identifies the <see cref="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.BorderColor"/> property. It describes the border stroke color of the <see cref="T:Syncfusion.XForms.MaskedEdit.SfMaskedEdit"/> control.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.CultureProperty">
+            <summary>
+            Identifies the <see cref="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.Culture"/> property. The culture information is associated with the <see cref="T:Syncfusion.XForms.MaskedEdit.SfMaskedEdit"/> control.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.ErrorBorderColorProperty">
+            <summary>
+            Identifies the <see cref="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.ErrorBorderColor"/> property. The border stroke color is shown when validation is failed in the <see cref="T:Syncfusion.XForms.MaskedEdit.SfMaskedEdit"/> control.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.MaskProperty">
+            <summary>
+            Identifies the <see cref="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.Mask"/> property. It is used to validate input as users type in the <see cref="T:Syncfusion.XForms.MaskedEdit.SfMaskedEdit"/> control.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.MaskTypeProperty">
+            <summary>
+            Identifies the <see cref="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.MaskType"/> property. The types of mask elements are used to validate user input in the <see cref="T:Syncfusion.XForms.MaskedEdit.SfMaskedEdit"/> control.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.PromptCharProperty">
+            <summary>
+            Identifies the <see cref="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.PromptChar"/> property. The character is used to represent the absence of user input in the <see cref="T:Syncfusion.XForms.MaskedEdit.SfMaskedEdit"/> control.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.HidePromptOnLeaveProperty">
+            <summary>
+            Identifies the <see cref="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.HidePromptOnLeave"/> property. The prompt characters in the input mask are hidden when the masked text box loses focus.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.ValidationModeProperty">
+            <summary>
+            Identifies the <see cref="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.ValidationMode"/> property. It is input validation mode of <see cref="T:Syncfusion.XForms.MaskedEdit.SfMaskedEdit"/>.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.ValueMaskFormatProperty">
+            <summary>
+            Identifies the <see cref="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.ValueMaskFormat"/> property. The value formatting option of <see cref="T:Syncfusion.XForms.MaskedEdit.SfMaskedEdit"/>.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.CutCopyMaskFormatProperty">
+            <summary>
+            Identifies the <see cref="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.CutCopyMaskFormat"/> property. Literals and prompt characters are copied to clipboard in <see cref="T:Syncfusion.XForms.MaskedEdit.SfMaskedEdit"/> control.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.ValueProperty">
+            <summary>
+            Identifies the <see cref="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.Value"/> property. It is raw value of the <see cref="T:Syncfusion.XForms.MaskedEdit.SfMaskedEdit"/> control.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.HorizontalTextAlignmentProperty">
+            <summary>
+            Identifies the <see cref="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.HorizontalTextAlignment"/> property. It is horizontal alignment for the text of the <see cref="T:Syncfusion.XForms.MaskedEdit.SfMaskedEdit"/> control.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.TextColorProperty">
+            <summary>
+            Identifies the <see cref="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.TextColor"/> property. It is color for the text of the <see cref="T:Syncfusion.XForms.MaskedEdit.SfMaskedEdit"/> control.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.FontSizeProperty">
+            <summary>
+            Identifies the <see cref="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.FontSize"/> property. This property can be used to change the size of the font for the <see cref="T:Syncfusion.XForms.MaskedEdit.SfMaskedEdit"/>.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.FontAttributesProperty">
+            <summary>
+            Identifies the <see cref="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.FontAttributes"/> property. It indicates whether the font for the MaskedEdit text is bold, italic, or neither.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.FontFamilyProperty">
+            <summary>
+            Identifies the <see cref="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.FontFamily"/> property. This is font family for the text of <see cref="T:Syncfusion.XForms.MaskedEdit.SfMaskedEdit"/>.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.WatermarkProperty">
+            <summary>
+            Identifies the <see cref="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.Watermark"/> property. The watermark text is shown when the MaskedEdit value is null or empty.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.WatermarkColorProperty">
+            <summary>
+            Identifies the <see cref="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.WatermarkColor"/> property. It's the color of the watermark text when the MaskedEdit value is null or empty.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.WatermarkFontSizeProperty">
+            <summary>
+            Identifies the <see cref="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.WatermarkFontSize"/> property. It's font size of the watermark text when the MaskedEdit value is null or empty.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.WatermarkFontAttributesProperty">
+            <summary>
+            Identifies the <see cref="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.WatermarkFontAttributes"/> property. It is font attributes of the watermark text when the MaskedEdit Value is null or empty.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.WatermarkFontFamilyProperty">
+            <summary>
+            Identifies the <see cref="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.WatermarkFontFamily"/> property. The font family of the watermark text when the MaskedEdit Value is null or empty.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.KeyboardProperty">
+            <summary>
+            Identifies the <see cref="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.Keyboard"/> property. The value of the Keyboard for the <see cref="T:Syncfusion.XForms.MaskedEdit.SfMaskedEdit"/> control.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.HasErrorPropertykey">
+            <summary>
+            Identifies the <see cref="F:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.HasErrorPropertykey"/> property. It indicates whether the mask is succeeded or not in the <see cref="T:Syncfusion.XForms.MaskedEdit.SfMaskedEdit"/> control.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.HasErrorProperty">
+            <summary>
+            Identifies the <see cref="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.HasError"/> property. It indicates whether the mask is succeeded or not in the <see cref="T:Syncfusion.XForms.MaskedEdit.SfMaskedEdit"/> control.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.PasswordCharProperty">
+            <summary>
+            Identifies the <see cref="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.PasswordChar"/> property. It is a value to be displayed in substitute of user input in the MaskedEdit control.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.EnablePasswordDelayProperty">
+            <summary>
+            Identifies the <see cref="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.PasswordChar"/> property. It is a value which displays the password character with some delay in the MaskedEdit control.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.PasswordDelayDurationProperty">
+            <summary>
+            Identifies the <see cref="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.PasswordChar"/> property. It is a value which describes the duration of the password delay in the MaskedEdit control.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.ClearButtonVisibilityProperty">
+            <summary>
+            Identifies the <see cref="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.ClearButtonVisibility"/> property. It indicates whether displays a clear button, which enables the user to clear the text.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.ReturnTypeProperty">
+            <summary>
+            Identifies the <see cref="F:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.ReturnTypeProperty"/> property. Literals and prompt characters are copied to clipboard in <see cref="T:Syncfusion.XForms.MaskedEdit.SfMaskedEdit"/> control.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.ReturnCommandProperty">
+            <summary>
+            Identifies the <see cref="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.PasswordChar"/> property. It is a value which describes the duration of the password delay in the MaskedEdit control.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.ReturnCommandParameterProperty">
+            <summary>
+            Identifies the <see cref="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.PasswordChar"/> property. It is a value which describes the duration of the password delay in the MaskedEdit control.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.SelectAllOnFocusProperty">
+            <summary>
+            Identifies the <see cref="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.SelectAllOnFocus"/> property.This property is used to specify whether select all the text or not on focus the control.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.IsReadOnlyProperty">
+            <summary>
+            Backing store for the <see cref="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.IsReadOnly"/> bindable property.
+            </summary>   
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.IsSpellCheckEnabledProperty">
+            <summary>
+            Identifies the <see cref="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.IsSpellCheckEnabled"/> property.This property is used to control the spell checking of masked edit display text.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.IsTextPredictionEnabledProperty">
+            <summary>
+            Identifies the <see cref="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.IsTextPredictionEnabled"/> property.This property is used to control the text prediction and automatic text correction of masked edit display text.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.FocusedBorderColorProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for focused border color property.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.XForms.MaskedEdit.SfMaskedEdit" /> class. This is a constructor field.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.ValueChanged">
+            <summary>
+            This ValueChanged event occurs when <see cref="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.Value"/> is changed.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.MaskInputRejected">
+            <summary>
+            This MaskInputRejected occurs when a character is rejected by the input mask in <see cref="T:Syncfusion.XForms.MaskedEdit.SfMaskedEdit"/>.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.Completed">
+            <summary>
+            The EventHandler is invoked when the return key is pressed in <see cref="E:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.Completed"/>.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.CursorPositionChanging">
+            <summary>
+            Raised the event during the change of cursor position. 
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.SkipLiterals">
+            <summary>
+             Gets or sets a value indicating whether whether user is allowed to reenter literal values in the <see cref="T:Syncfusion.XForms.MaskedEdit.SfMaskedEdit"/> control.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.CursorPosition">
+            <summary>
+            Gets or sets the position of the cursor in masked edit.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.ClearButtonVisibility">
+            <summary>
+            Gets or sets a value indicating whether displays a clear button, which enables the user to clear the text. 
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.BorderColor">
+            <summary>
+            Gets or sets a color that describes the border stroke color of the <see cref="T:Syncfusion.XForms.MaskedEdit.SfMaskedEdit"/> control.
+            </summary>
+            <value>The default value is Azure.</value>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.Culture">
+            <summary>
+            Gets or sets the culture information associated with the <see cref="T:Syncfusion.XForms.MaskedEdit.SfMaskedEdit"/> control.
+            </summary>
+            <value>The default value is CurrentUICulture.</value>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.CutCopyMaskFormat">
+            <summary>
+            Gets or sets a value that determines whether literals and prompt characters are copied to clipboard in the <see cref="T:Syncfusion.XForms.MaskedEdit.SfMaskedEdit"/> control.
+            </summary>
+            <value>The default value is null.</value>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.ReturnType">
+            <summary>
+            Gets or sets an enumeration value that controls the appearance of the return button.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.ReturnCommand">
+            <summary>
+            Gets or sets the command to run when the user presses the return key.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.ReturnCommandParameter">
+            <summary>
+            Gets or sets the parameter for the ReturnCommand.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.ErrorBorderColor">
+            <summary>
+            Gets or sets a border stroke color shown when the validation was failed in the <see cref="T:Syncfusion.XForms.MaskedEdit.SfMaskedEdit"/> control.
+            </summary>
+            <value>The default value is Red.</value>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.FontSize">
+            <summary>
+            Gets or sets the value of FontSize. This property can be used to the size of the font for <see cref="T:Syncfusion.XForms.MaskedEdit.SfMaskedEdit"/>.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.FontAttributes">
+            <summary>
+            Gets or sets the value that indicates whether the font for the MaskedEdit text is bold,italic, or neither.
+            </summary>
+            <value>The default value is Azure.</value>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.FontFamily">
+            <summary>
+            Gets or sets the font family for the text of <see cref="T:Syncfusion.XForms.MaskedEdit.SfMaskedEdit"/>.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.HasError">
+            <summary>
+            Gets a value indicating whether the mask is succeeded or not in the <see cref="T:Syncfusion.XForms.MaskedEdit.SfMaskedEdit"/> control.
+            </summary>
+            <value>The default value is false.</value>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.HorizontalTextAlignment">
+            <summary>
+            Gets or sets the horizontal alignment for the text of <see cref="T:Syncfusion.XForms.MaskedEdit.SfMaskedEdit"/> control.
+            </summary>
+            <value>The default value is Start.</value>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.Mask">
+            <summary>
+            Gets or sets the mask used to validate input as the user types. The mask must be a string composed of one or more of the masking elements.
+            </summary>
+            <value>The default value is Empty.</value>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.MaskType">
+            <summary>
+            Gets or sets the type of mask elements used to validate user input in the <see cref="T:Syncfusion.XForms.MaskedEdit.SfMaskedEdit"/> control.
+            </summary>
+            <value>The default value is Text.</value>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.PromptChar">
+            <summary>
+            Gets or sets the character used to represent the absence of user input in the <see cref="T:Syncfusion.XForms.MaskedEdit.SfMaskedEdit"/> control.
+            </summary>
+            <value>The default value is ''.</value>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.HidePromptOnLeave">
+            <summary>
+            Gets or sets a value indicating whether the prompt characters in the input mask are hidden when the masked text box loses focus.
+            </summary>
+            <value>The default value is false.</value>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.TextColor">
+            <summary>
+            Gets or sets the color for the text of the <see cref="T:Syncfusion.XForms.MaskedEdit.SfMaskedEdit"/> control.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.ValidationMode">
+            <summary>
+            Gets or sets the input validation mode of the <see cref="T:Syncfusion.XForms.MaskedEdit.SfMaskedEdit"/> control.
+            </summary>
+            <value>The default value is LostFocus.</value>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.Value">
+            <summary>
+            Gets or sets the raw value of the <see cref="T:Syncfusion.XForms.MaskedEdit.SfMaskedEdit"/> control.
+            </summary>
+            <value>The default value is null.</value>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.ValueMaskFormat">
+            <summary>
+            Gets or sets the value formatting option of the <see cref="T:Syncfusion.XForms.MaskedEdit.SfMaskedEdit"/> control.
+            </summary>
+            <value>The default value is IncludePrompt.</value>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.Watermark">
+            <summary>
+            Gets or sets the watermark text shown when the <see cref="T:Syncfusion.XForms.MaskedEdit.SfMaskedEdit"/> value is null or empty.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.WatermarkColor">
+            <summary>
+            Gets or sets the color of the watermark text when the <see cref="T:Syncfusion.XForms.MaskedEdit.SfMaskedEdit"/> value is null or empty.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.WatermarkFontSize">
+            <summary>
+            Gets or sets the font size of the watermark text when the <see cref="T:Syncfusion.XForms.MaskedEdit.SfMaskedEdit"/> value is null or empty.
+            </summary>
+            <value>The default value is false.</value>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.WatermarkFontAttributes">
+            <summary>
+            Gets or sets the value that indicates whether the font for the watermark text is bold,italic, or neither.
+            </summary>
+            <value>The default value is Azure.</value>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.WatermarkFontFamily">
+            <summary>
+            Gets or sets the font family for the watermark text when the <see cref="T:Syncfusion.XForms.MaskedEdit.SfMaskedEdit"/> value is null or empty.
+            </summary>
+            <value>The default value is Azure.</value>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.Keyboard">
+            <summary>
+            Gets or sets the value of the Keyboard for the <see cref="T:Syncfusion.XForms.MaskedEdit.SfMaskedEdit"/> control.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.PasswordChar">
+            <summary>
+            Gets or sets a value to be displayed in substitute of user input in the <see cref="T:Syncfusion.XForms.MaskedEdit.SfMaskedEdit"/> control.
+            </summary>
+            <value>The default value is ''.</value>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.EnablePasswordDelay">
+            <summary>
+            Gets or sets a value indicating whether gets or sets a value to be displayed with delay when typing the password character <see cref="T:Syncfusion.XForms.MaskedEdit.SfMaskedEdit"/> control.
+            </summary>
+            <value>The default value is false.</value>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.PasswordDelayDuration">
+            <summary>
+            Gets or sets the duration of the delay when tying the password character <see cref="T:Syncfusion.XForms.MaskedEdit.SfMaskedEdit"/> control.
+            </summary>
+            <value>The default value is 1.</value>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.SelectAllOnFocus" -->
+        <member name="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.IsReadOnly">
+            <summary>
+            Gets or sets a value indicating whether user should be prevented from modifying the text. Default is false.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.IsSpellCheckEnabled">
+            <summary>
+            Gets or sets a value indicating whether to control the spell checking of masked edit display text.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.IsTextPredictionEnabled">
+            <summary>
+            Gets or sets a value indicating whether to control the text prediction and automatic text correction of masked edit display text.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.Syncfusion#XForms#TextInputLayout#IMaskedEdit#HasMask">
+            <summary>
+            Gets a value indicating whether the masked edit has mask value or not.
+            </summary>
+            XAMARIN-41662:[iOS] SfMaskedEdit does not accepts input while placing it inside a SfTextInputLayout.
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.Syncfusion#XForms#TextInputLayout#IMaskedEdit#IsPassword">
+            <summary>
+            Gets a value indicating whether the masked edit input view has password character or not.
+            </summary>
+            XAMARIN-42509:[iOS] Inputs do not get masked properly when placing the MaskedEdit in TextInputLayout and set PasswordChar.
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.FocusedBorderColor">
+            <summary>
+            Gets or sets the color of the focused border.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.PropertiesChanged">
+            <summary>
+            Gets or sets the list of property names.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.Syncfusion#XForms#Themes#IParentThemeElement#GetThemeDictionary">
+            <summary>
+            To get the initial set of colors from theme dictionary.
+            </summary>
+            <returns>Return the MaskedEdit theme dictionary.</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.Syncfusion#XForms#Themes#IThemeElement#OnControlThemeChanged(System.String,System.String)">
+            <summary>
+            Method invoke when theme changes.
+            </summary>
+            <param name="oldTheme">Old theme name.</param>
+            <param name="newTheme">New theme name.</param>
+        </member>
+        <member name="M:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.Syncfusion#XForms#Themes#IThemeElement#OnCommonThemeChanged(System.String,System.String)">
+            <summary>
+            Method invoke at whenever common theme changes.
+            </summary>
+            <param name="oldTheme">Old theme name.</param>
+            <param name="newTheme">New theme name.</param>
+        </member>
+        <member name="M:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.OnMaskedEditPropertyChanged(System.String)">
+            <summary>
+            Handles On MaskedEdit Property Changed event.
+            </summary>
+            <param name="propertyName">changed property name.</param>
+        </member>
+        <member name="M:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.OnCursorPositionChanging(Syncfusion.XForms.MaskedEdit.CursorPositionChangingEventArgs)">
+            <summary>
+            Method called to raise the cursor position changing event.
+            </summary>
+            <param name="args">cursor position changing arguments.</param>
+        </member>
+        <member name="M:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.FontSizeDefaultValueCreator">
+            <summary>
+            Method returns default value of font size. 
+            </summary>
+            <returns>Returns double value.</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.GetDefaultWaterMarkColor">
+            <summary>
+            Get default value of watermark text color.
+            </summary>
+            <returns>returns default color for watermark text.</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.GetDefaultTextFontFamily">
+            <summary>
+            Get default value of Font family.
+            </summary>
+            <returns>returns default font family.</returns>
+        </member>
+        <member name="M:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.OnBorderColorPropertyChanged(Xamarin.Forms.BindableObject,System.Object,System.Object)">
+            <summary>
+            Handles BorderColor changed event.
+            </summary>
+            <param name="bindable">the data binding object.</param>
+            <param name="oldValue">the old value.</param>
+            <param name="newValue">the new value.</param>
+        </member>
+        <member name="M:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.OnFocusedBorderColorPropertyChanged(Xamarin.Forms.BindableObject,System.Object,System.Object)">
+            <summary>
+            Handles FocusedBorderColor changed event.
+            </summary>
+            <param name="bindable">the data binding object.</param>
+            <param name="oldValue">the old value.</param>
+            <param name="newValue">the new value.</param>
+        </member>
+        <member name="M:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.OnCulturePropertyChanged(Xamarin.Forms.BindableObject,System.Object,System.Object)">
+            <summary>
+            Handles Culture changed event.
+            </summary>
+            <param name="bindable">the data binding object.</param>
+            <param name="oldValue">the old value.</param>
+            <param name="newValue">the new value.</param>
+        </member>
+        <member name="M:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.OnHasErrorPropertyChanged(Xamarin.Forms.BindableObject,System.Object,System.Object)">
+            <summary>
+            Handles HasError changed event.
+            </summary>
+            <param name="bindable">the data binding object.</param>
+            <param name="oldValue">the old value.</param>
+            <param name="newValue">the new value.</param>
+        </member>
+        <member name="M:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.OnErrorBorderColorPropertyChanged(Xamarin.Forms.BindableObject,System.Object,System.Object)">
+            <summary>
+            Handles ErrorBorderColor changed event.
+            </summary>
+            <param name="bindable">the data binding object.</param>
+            <param name="oldValue">the old value.</param>
+            <param name="newValue">the new value.</param>
+        </member>
+        <member name="M:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.OnMaskPropertyChanged(Xamarin.Forms.BindableObject,System.Object,System.Object)">
+            <summary>
+            Handles Mask changed event.
+            </summary>
+            <param name="bindable">the data binding object.</param>
+            <param name="oldValue">the old value.</param>
+            <param name="newValue">the new value.</param>
+        </member>
+        <member name="M:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.OnMaskTypePropertyChanged(Xamarin.Forms.BindableObject,System.Object,System.Object)">
+            <summary>
+            Handles MaskType changed event.
+            </summary>
+            <param name="bindable">the data binding object.</param>
+            <param name="oldValue">the old value.</param>
+            <param name="newValue">the new value.</param>
+        </member>
+        <member name="M:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.OnCursorPositionPropertyChanged(Xamarin.Forms.BindableObject,System.Object,System.Object)">
+            <summary>
+            Handles cursor position property changed.
+            </summary>
+            <param name="bindable">SfMaskedEdit object.</param>
+            <param name="oldValue">Old value cursor position.</param>
+            <param name="newValue">New value cursor position.</param>
+        </member>
+        <member name="M:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.OnPromptCharPropertyChanged(Xamarin.Forms.BindableObject,System.Object,System.Object)">
+            <summary>
+            Handles PromptChar changed event
+            </summary>
+            <param name="bindable">the data binding object.</param>
+            <param name="oldValue">the old value.</param>
+            <param name="newValue">the new value.</param>
+        </member>
+        <member name="M:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.OnHidePromptOnLeavePropertyChanged(Xamarin.Forms.BindableObject,System.Object,System.Object)">
+            <summary>
+            Handles HidePromptOnLeave changed event.
+            </summary>
+            <param name="bindable">the data binding object.</param>
+            <param name="oldValue">the old value.</param>
+            <param name="newValue">the new value.</param>
+        </member>
+        <member name="M:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.OnValidationModePropertyChanged(Xamarin.Forms.BindableObject,System.Object,System.Object)">
+            <summary>
+            Handles ValidationMode changed event.
+            </summary>
+            <param name="bindable">the data binding object.</param>
+            <param name="oldValue">the old value.</param>
+            <param name="newValue">the new value.</param>
+        </member>
+        <member name="M:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.OnValueMaskFormatPropertyChanged(Xamarin.Forms.BindableObject,System.Object,System.Object)">
+            <summary>
+            Handles ValueMaskFormat changed event.
+            </summary>
+            <param name="bindable">the data binding object.</param>
+            <param name="oldValue">the old value.</param>
+            <param name="newValue">the new value.</param>
+        </member>
+        <member name="M:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.OnCutCopyMaskFormatPropertyChanged(Xamarin.Forms.BindableObject,System.Object,System.Object)">
+            <summary>
+            Handles CutCopyMaskFormat changed event.
+            </summary>
+            <param name="bindable">the data binding object.</param>
+            <param name="oldValue">the old value.</param>
+            <param name="newValue">the new value.</param>
+        </member>
+        <member name="M:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.OnReturnTypePropertyChanged(Xamarin.Forms.BindableObject,System.Object,System.Object)">
+            <summary>
+            Handles ReturnType changed event.
+            </summary>
+            <param name="bindable">the data binding object.</param>
+            <param name="oldValue">the old value.</param>
+            <param name="newValue">the new value.</param>
+        </member>
+        <member name="M:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.OnClearButtonVisibilityPropertyChanged(Xamarin.Forms.BindableObject,System.Object,System.Object)">
+            <summary>
+            Handle clear button visibility property changed.
+            </summary>
+            <param name="bindable">the data binding object.</param>
+            <param name="oldValue">the old value.</param>
+            <param name="newValue">the new value.</param>
+        </member>
+        <member name="M:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.OnValuePropertyChanged(Xamarin.Forms.BindableObject,System.Object,System.Object)">
+            <summary>
+            Handles Value changed event.
+            </summary>
+            <param name="bindable">the data binding object.</param>
+            <param name="oldValue">the old value.</param>
+            <param name="newValue">the new value.</param>
+        </member>
+        <member name="M:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.OnHorizontalTextAlignmentPropertyChanged(Xamarin.Forms.BindableObject,System.Object,System.Object)">
+            <summary>
+            Handles HorizontalTextAlignment changed event.
+            </summary>
+            <param name="bindable">the data binding object.</param>
+            <param name="oldValue">the old value.</param>
+            <param name="newValue">the new value.</param>
+        </member>
+        <member name="M:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.OnTextColorPropertyChanged(Xamarin.Forms.BindableObject,System.Object,System.Object)">
+            <summary>
+            Handles TextColor changed event.
+            </summary>
+            <param name="bindable">the data binding object.</param>
+            <param name="oldValue">the old value.</param>
+            <param name="newValue">the new value.</param>
+        </member>
+        <member name="M:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.OnFontSizePropertyChanged(Xamarin.Forms.BindableObject,System.Object,System.Object)">
+            <summary>
+            Handles FontSize changed event.
+            </summary>
+            <param name="bindable">the data binding object.</param>
+            <param name="oldValue">the old value.</param>
+            <param name="newValue">the new value.</param>
+        </member>
+        <member name="M:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.OnFontAttributesPropertyChanged(Xamarin.Forms.BindableObject,System.Object,System.Object)">
+            <summary>
+            Handles FontAttributes changed event.
+            </summary>
+            <param name="bindable">the data binding object.</param>
+            <param name="oldValue">the old value.</param>
+            <param name="newValue">the new value.</param>
+        </member>
+        <member name="M:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.OnFontFamilyPropertyChanged(Xamarin.Forms.BindableObject,System.Object,System.Object)">
+            <summary>
+            Handles FontFamily changed event.
+            </summary>
+            <param name="bindable">the data binding object.</param>
+            <param name="oldValue">the old value.</param>
+            <param name="newValue">the new value.</param>
+        </member>
+        <member name="M:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.OnWatermarkPropertyChanged(Xamarin.Forms.BindableObject,System.Object,System.Object)">
+            <summary>
+            Handles Watermark changed event.
+            </summary>
+            <param name="bindable">the data binding object.</param>
+            <param name="oldValue">the old value.</param>
+            <param name="newValue">the new value.</param>
+        </member>
+        <member name="M:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.OnWatermarkColorPropertyChanged(Xamarin.Forms.BindableObject,System.Object,System.Object)">
+            <summary>
+            Handles WatermarkColor changed event.
+            </summary>
+            <param name="bindable">the data binding object.</param>
+            <param name="oldValue">the old value.</param>
+            <param name="newValue">the new value.</param>
+        </member>
+        <member name="M:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.OnWatermarkFontSizePropertyChanged(Xamarin.Forms.BindableObject,System.Object,System.Object)">
+            <summary>
+            Handles WatermarkFontSize changed event.
+            </summary>
+            <param name="bindable">the data binding object.</param>
+            <param name="oldValue">the old value.</param>
+            <param name="newValue">the new value.</param>
+        </member>
+        <member name="M:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.OnWatermarkFontAttributesPropertyChanged(Xamarin.Forms.BindableObject,System.Object,System.Object)">
+            <summary>
+            Handles WatermarkFontAttributes changed event.
+            </summary>
+            <param name="bindable">the data binding object.</param>
+            <param name="oldValue">the old value.</param>
+            <param name="newValue">the new value.</param>
+        </member>
+        <member name="M:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.OnWatermarkFontFamilyPropertyChanged(Xamarin.Forms.BindableObject,System.Object,System.Object)">
+            <summary>
+            Handles WatermarkFontFamily changed event.
+            </summary>
+            <param name="bindable">the data binding object.</param>
+            <param name="oldValue">the old value.</param>
+            <param name="newValue">the new value.</param>
+        </member>
+        <member name="M:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.OnKeyboardPropertyChanged(Xamarin.Forms.BindableObject,System.Object,System.Object)">
+            <summary>
+            Handles Keyboard changed event.
+            </summary>
+            <param name="bindable">the data binding object.</param>
+            <param name="oldValue">the old value.</param>
+            <param name="newValue">the new value.</param>
+        </member>
+        <member name="M:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.OnPasswordCharPropertyChanged(Xamarin.Forms.BindableObject,System.Object,System.Object)">
+            <summary>
+            Handles PasswordChar changed event.
+            </summary>
+            <param name="bindable">the data binding object.</param>
+            <param name="oldValue">the old value.</param>
+            <param name="newValue">the new value.</param>
+        </member>
+        <member name="M:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.OnEnablePasswordDelayPropertyChanged(Xamarin.Forms.BindableObject,System.Object,System.Object)">
+            <summary>
+            Handles PasswordChar changed event.
+            </summary>
+            <param name="bindable">the data binding object.</param>
+            <param name="oldValue">the old value.</param>
+            <param name="newValue">the new value.</param>
+        </member>
+        <member name="M:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.OnPasswordDelayDurationPropertyChanged(Xamarin.Forms.BindableObject,System.Object,System.Object)">
+            <summary>
+            Handles the Password delay duration changed event.
+            </summary>
+            <param name="bindable">the data binding object.</param>
+            <param name="oldValue">the old value.</param>
+            <param name="newValue">the new value.</param>
+        </member>
+        <member name="M:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.OnSelectAllOnFocusPropertyChanged(Xamarin.Forms.BindableObject,System.Object,System.Object)">
+            <summary>
+            Handles SelectAllOnFocus changed event.
+            </summary>
+            <param name="bindable">the data binding object.</param>
+            <param name="oldValue">the old value.</param>
+            <param name="newValue">the new value.</param>
+        </member>
+        <member name="M:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.OnIsReadOnlyPropertyChanged(Xamarin.Forms.BindableObject,System.Object,System.Object)">
+            <summary>
+            Handles IsReadOnly changed event.
+            </summary>
+            <param name="bindable">the data binding object</param>
+            <param name="oldValue">the old value</param>
+            <param name="newValue">the new value</param>
+        </member>
+        <member name="M:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.OnIsSpellCheckEnabledPropertyChanged(Xamarin.Forms.BindableObject,System.Object,System.Object)">
+            <summary>
+             Handles IsSpellCheckEnabled changed event.
+            </summary>
+            <param name="bindable">the data binding object</param>
+            <param name="oldValue">the old value</param>
+            <param name="newValue">the new value</param>
+        </member>
+        <member name="M:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.OnIsTextPredictionEnabledPropertyChanged(Xamarin.Forms.BindableObject,System.Object,System.Object)">
+            <summary>
+             Handles IsTextPredictionEnabled changed event.
+            </summary>
+            <param name="bindable">the data binding object</param>
+            <param name="oldValue">the old value</param>
+            <param name="newValue">the new value</param>
+        </member>
+        <member name="M:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.RaiseMaskInputRejected(Syncfusion.XForms.MaskedEdit.MaskInputRejectedEventArgs)">
+            <summary>
+            The raise MaskInputRejected event.
+            </summary>
+            <param name="args"> The Argument. </param>
+        </member>
+        <member name="M:Syncfusion.XForms.MaskedEdit.SfMaskedEdit.RaiseCompletedEvent(System.EventArgs)">
+            <summary>
+            The raise Completed event.
+            </summary>
+            <param name="args"> The Argument. </param>
+        </member>
+        <member name="T:Syncfusion.XForms.MaskedEdit.CursorPositionChangingEventArgs">
+            <summary>
+            To get the cursor position changing arguments. 
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.CursorPositionChangingEventArgs.Cancel">
+            <summary>
+            Gets or sets a value indicating whether to restrict the cursor movement.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.CursorPositionChangingEventArgs.NewValue">
+            <summary>
+            Gets the current cursor index.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.CursorPositionChangingEventArgs.OldValue">
+            <summary>
+            Gets the previous cursor index.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.CursorPositionChangingEventArgs.CurrentValue">
+            <summary>
+            Gets or sets a value indicates the current cursor index.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.CursorPositionChangingEventArgs.LastValue">
+            <summary>
+            Gets or sets a value indicates the previous cursor index.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.XForms.MaskedEdit.SfMaskedEditStyles">
+            <summary>
+            The <see cref="T:Syncfusion.XForms.MaskedEdit.SfMaskedEditStyles"/> class holds theme style for the masked edit <see cref="T:Syncfusion.XForms.MaskedEdit.SfMaskedEdit"/> control.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.XForms.MaskedEdit.SfMaskedEditStyles.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.XForms.MaskedEdit.SfMaskedEditStyles" /> class.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.XForms.MaskedEdit.ValueChangedEventArgs">
+            <summary>
+            The <see cref="T:Syncfusion.XForms.MaskedEdit.ValueChangedEventArgs"/> class holds an argument of the value changed event.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.XForms.MaskedEdit.ValueChangedEventArgs.#ctor(System.Object)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.XForms.MaskedEdit.ValueChangedEventArgs" /> class in MaskedEdit.
+            </summary>
+            <param name="value">Current state of the control.</param>
+        </member>
+        <member name="P:Syncfusion.XForms.MaskedEdit.ValueChangedEventArgs.Value">
+            <summary>
+            Gets a value of the input field in the <see cref="T:Syncfusion.XForms.MaskedEdit.ValueChangedEventArgs"/> class of the <see cref="T:Syncfusion.XForms.MaskedEdit.SfMaskedEdit"/> control.
+            </summary>
+        </member>
+    </members>
+</doc>
