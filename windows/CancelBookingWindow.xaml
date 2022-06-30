@@ -1,0 +1,24 @@
+﻿<Window x:Class="CLINICS.windows.CancelBookingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CLINICS.windows"
+        mc:Ignorable="d"
+        Title="CancelBookingWindow" Height="300" Width="400" WindowStyle="None" AllowsTransparency="True" Background="Transparent" FontFamily="Montserrat">
+    <Grid>
+        <Border CornerRadius="25"  BorderThickness="2" Padding="6" Background="White">
+            <Grid>
+                <Grid>
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" >
+                        <TextBlock FontSize="20" x:Name="clickText1" HorizontalAlignment="Center"> Вы уверены, </TextBlock>
+                        <TextBlock FontSize="20"  x:Name="clickText2" HorizontalAlignment="Center" Margin="0 0 0 30">что хотите отменить бронь?</TextBlock>
+                        <Button x:Name="cancelBookingRenewStatus" IsDefault = "true" Click="cancelBookingRenewStatus_Click"  VerticalAlignment="Center" HorizontalAlignment="Center" Content="Отменить" Template="{StaticResource EndServiceDoctor}"/>
+                        <TextBlock FontSize="20" x:Name="successText" HorizontalAlignment="Center"  Margin="0 -100 0 30" Visibility="Hidden"> Бронь отменена</TextBlock>
+                        <Button x:Name="okShowWithNewStatus" IsDefault = "true" Click="okShowWithNewStatus_Click"  Margin="0 -30 0 30" Visibility="Hidden" VerticalAlignment="Center" HorizontalAlignment="Center" Content="ОК" Template="{StaticResource EndServiceDoctor}"/>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>
